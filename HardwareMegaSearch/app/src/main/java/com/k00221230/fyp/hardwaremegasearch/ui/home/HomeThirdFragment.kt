@@ -12,7 +12,7 @@ import androidx.navigation.fragment.navArgs
 
 import com.k00221230.fyp.hardwaremegasearch.R
 
-class HomeSecondFragment : Fragment() {
+class HomeThirdFragment : Fragment() {
 
     private val args: HomeSecondFragmentArgs by navArgs()
 
@@ -21,7 +21,7 @@ class HomeSecondFragment : Fragment() {
             savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home_second, container, false)
+        return inflater.inflate(R.layout.fragment_home_third, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -30,8 +30,8 @@ class HomeSecondFragment : Fragment() {
 //        view.findViewById<TextView>(R.id.textview_home_second).text =
 //                getString(R.string.hello_home_second, args.myArg)
 
-        view.findViewById<Button>(R.id.btn_complete_stage_01).setOnClickListener {
-            findNavController().navigate(R.id.action_HomeSecondFragment_to_HomeThirdFragment)
+        view.findViewById<Button>(R.id.btn_complete_stage_02).setOnClickListener {
+            findNavController().navigate(R.id.action_HomeThirdFragment_to_HomeFragment)
         }
     }
 }
