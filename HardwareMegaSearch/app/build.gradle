@@ -11,7 +11,7 @@ android {
     buildToolsVersion "29.0.2"
     defaultConfig {
         applicationId "com.k00221230.fyp.hardwaremegasearch"
-        minSdkVersion 22
+        minSdkVersion 28
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -24,11 +24,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = 12
-        targetCompatibility = 12
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
     }
     kotlinOptions {
-        jvmTarget = "12"
+        jvmTarget = "1.8"
     }
 }
 
