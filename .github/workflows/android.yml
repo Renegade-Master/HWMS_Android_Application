@@ -17,4 +17,6 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Gradle
-      run: ./HardwareMegaSearch/gradlew build
+      run: HardwareMegaSearch/gradlew.bat build
+    - name: Build Complete
+      run: echo "Build Complete"
