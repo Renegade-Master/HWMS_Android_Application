@@ -17,4 +17,6 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Gradle
-      run: HardwareMegaSearch/gradlew.bat build
+      run: |
+        cd HardwareMegaSearch
+        gradlew.bat build
