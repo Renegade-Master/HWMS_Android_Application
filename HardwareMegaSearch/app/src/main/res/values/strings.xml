@@ -10,6 +10,7 @@
     <string name="menu_home">Hardware Mega Search</string>
     <string name="menu_history">History</string>
     <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_gallery">Gallery</string>
 
     <string name="search_stage_01">Choose a Component Type</string>
     <string name="search_stage_02">Choose a Primary Manufacturer</string>
