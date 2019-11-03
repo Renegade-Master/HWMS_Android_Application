@@ -19,4 +19,4 @@ jobs:
     - name: Build with Gradle
       run: |
         cd HardwareMegaSearch
-        HardwareMegaSearch\gradlew build
+        ./gradlew build
