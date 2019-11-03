@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.HomeSecondFragment">
+    tools:context=".ui.home.HomeThirdFragment">
 
     <RadioGroup
         android:id="@+id/radiogrp_component_type"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/btn_complete_stage_01"
+        app:layout_constraintBottom_toTopOf="@id/btn_complete_stage_02"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -36,7 +36,7 @@
     </RadioGroup>
 
     <Button
-        android:id="@+id/btn_complete_stage_01"
+        android:id="@+id/btn_complete_stage_02"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/next"
