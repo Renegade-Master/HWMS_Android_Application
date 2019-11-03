@@ -21,4 +21,5 @@ jobs:
         dir
         cd HardwareMegaSearch
         dir
+        dir gradlew.bat
         gradlew.bat build
