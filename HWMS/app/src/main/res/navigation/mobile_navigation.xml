@@ -13,13 +13,27 @@
 
         <action
             android:id="@+id/action_HomeFragment_to_HomeSecondFragment"
-            app:destination="@id/nav_home_second" />
+            app:destination="@id/nav_searchwiz_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_searchwiz_home"
+        android:name="com.k00221230.fyp.hwms.ui.searchwizard.SearchWizHomeFragment"
+        android:label="@string/searchwiz_home"
+        tools:layout="@layout/fragment_searchwiz_home">
+        <action
+            android:id="@+id/action_HomeSecondFragment_to_HomeFragment"
+            app:destination="@id/nav_home" />
+
+        <argument
+            android:name="myArg"
+            app:argType="string" />
     </fragment>
     <fragment
-        android:id="@+id/nav_home_second"
-        android:name="com.k00221230.fyp.hwms.ui.home.HomeSecondFragment"
-        android:label="@string/home_second"
-        tools:layout="@layout/fragment_home_second">
+        android:id="@+id/nav_searchwiz_l0b0"
+        android:name="com.k00221230.fyp.hwms.ui.searchwizard.SearchWizL0B0Fragment"
+        android:label="@string/searchwiz_home"
+        tools:layout="@layout/fragment_searchwiz_home">
         <action
             android:id="@+id/action_HomeSecondFragment_to_HomeFragment"
             app:destination="@id/nav_home" />
@@ -30,14 +44,8 @@
     </fragment>
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.k00221230.fyp.hwms.ui.gallery.GalleryFragment"
-        android:label="@string/menu_history"
-        tools:layout="@layout/fragment_gallery" />
-
-    <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.k00221230.fyp.hwms.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_searchhistory"
+        android:name="com.k00221230.fyp.hwms.ui.searchhistory.SearchHistoryFragment"
+        android:label="@string/menu_searchhistory"
+        tools:layout="@layout/fragment_searchhistory" />
 </navigation>

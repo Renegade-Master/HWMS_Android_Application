@@ -4,26 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.HomeSecondFragment">
+    tools:context=".ui.searchwizard.SearchWizHomeFragment">
 
     <TextView
-        android:id="@+id/textview_home_second"
+        android:id="@+id/textview_searchwiz_search"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="16dp"
+        android:textAlignment="center"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@id/button_home_second"
+        app:layout_constraintBottom_toTopOf="@id/button_searchwiz_next"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button_home_second"
+        android:id="@+id/button_searchwiz_next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/previous"
+        android:text="@string/new_search"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_home_second" />
+        app:layout_constraintTop_toBottomOf="@id/textview_searchwiz_search" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,4 @@
-package com.k00221230.fyp.hwms.ui.slideshow
+package com.k00221230.fyp.hwms.ui.searchhistory
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,20 +10,20 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.k00221230.fyp.hwms.R
 
-class SlideshowFragment : Fragment() {
+class SearchHistoryFragment : Fragment() {
 
-    private lateinit var slideshowViewModel: SlideshowViewModel
+    private lateinit var galleryViewModel: SearchHistoryViewModel
 
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        slideshowViewModel =
-                ViewModelProviders.of(this).get(SlideshowViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_slideshow, container, false)
-        val textView: TextView = root.findViewById(R.id.text_slideshow)
-        slideshowViewModel.text.observe(viewLifecycleOwner, Observer {
+        galleryViewModel =
+                ViewModelProviders.of(this).get(SearchHistoryViewModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_searchhistory, container, false)
+        val textView: TextView = root.findViewById(R.id.text_gallery)
+        galleryViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root
