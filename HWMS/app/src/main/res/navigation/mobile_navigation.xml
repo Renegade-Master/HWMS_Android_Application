@@ -32,7 +32,7 @@
     <fragment
         android:id="@+id/nav_gallery"
         android:name="com.k00221230.fyp.hwms.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
+        android:label="@string/menu_history"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
