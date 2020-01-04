@@ -1,4 +1,4 @@
-package com.k00221230.fyp.hwms.ui.searchwizard
+package com.k00221230.fyp.hwms.ui.searchwizard.cpu
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -12,27 +12,30 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 
 import com.k00221230.fyp.hwms.R
+import com.k00221230.fyp.hwms.ui.searchwizard.SearchWizViewModel
 
-class SearchWizL0B0Fragment : Fragment() {
+class SearchWizComponentSelectCpuFragment : Fragment() {
 
-    private val args: SearchWizL0B0FragmentArgs by navArgs()
+    private val args: SearchWizComponentSelectCpuFragmentArgs by navArgs()
+
+    private lateinit var SearchWizComponentSelectCpuViewModel: SearchWizViewModel
 
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_searchwiz_search, container, false)
+        return inflater.inflate(R.layout.fragment_searchwiz_componentselect, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        view.findViewById<TextView>(R.id.textview_searchwiz_search).text =
-                getString(R.string.hello_searchwiz_home, args.myArg)
+        view.findViewById<TextView>(R.id.textview_searchwiz_selectcomponent).text =
+                getString(R.string.hello_searchwiz_component, args.myArg)
 
         view.findViewById<Button>(R.id.button_searchwiz_next).setOnClickListener {
-            findNavController().navigate(R.id.action_HomeSecondFragment_to_HomeFragment)
+            findNavController().navigate(R.id.action_SearchWizComponentSelectFragment_to_SearchWizHomeFragment)
         }
     }
 }

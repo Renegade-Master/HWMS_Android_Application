@@ -26,5 +26,14 @@
 
         \nArg: %1$s
     </string>
-    <string name="hello_searchwiz_component">Hello SearchWizComponentFragment.\nArg: %1$s</string>
+    <string name="hello_searchwiz_component">Please select a component from the list.\nArg: %1$s</string>
+
+    <!-- Hardware Strings -->
+    <string name="label_cpu">CPU</string>
+    <string name="label_gpu">GPU</string>
+    <string name="label_motherboard">Motherboard</string>
+    <string name="label_memory">Memory/RAM</string>
+    <string name="label_storage">Storage</string>
+    <string name="label_psu">Power Supply</string>
+    <string name="label_case">Case</string>
 </resources>

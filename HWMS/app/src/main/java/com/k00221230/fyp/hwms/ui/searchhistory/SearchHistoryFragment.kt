@@ -12,18 +12,18 @@ import com.k00221230.fyp.hwms.R
 
 class SearchHistoryFragment : Fragment() {
 
-    private lateinit var galleryViewModel: SearchHistoryViewModel
+    private lateinit var searchHistoryViewModel: SearchHistoryViewModel
 
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        galleryViewModel =
+        searchHistoryViewModel =
                 ViewModelProviders.of(this).get(SearchHistoryViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_searchhistory, container, false)
         val textView: TextView = root.findViewById(R.id.text_gallery)
-        galleryViewModel.text.observe(viewLifecycleOwner, Observer {
+        searchHistoryViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root

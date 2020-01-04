@@ -21,8 +21,24 @@
         android:name="com.k00221230.fyp.hwms.ui.searchwizard.SearchWizHomeFragment"
         android:label="@string/searchwiz_home"
         tools:layout="@layout/fragment_searchwiz_home">
-        <action
+<!--        <action
             android:id="@+id/action_HomeSecondFragment_to_HomeFragment"
+            app:destination="@id/nav_home" /> -->
+        <action
+            android:id="@+id/action_SearchWizHomeFragment_to_SearchWizComponentSelectFragment"
+            app:destination="@id/nav_searchwiz_componentselect" />
+
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_searchwiz_componentselect"
+        android:name="com.k00221230.fyp.hwms.ui.searchwizard.SearchWizComponentSelectFragment"
+        android:label="@string/searchwiz_home"
+        tools:layout="@layout/fragment_searchwiz_componentselect">
+        <action
+            android:id="@+id/action_SearchWizComponentSelectFragment_to_SearchWizHomeFragment"
             app:destination="@id/nav_home" />
 
         <argument
@@ -30,12 +46,12 @@
             app:argType="string" />
     </fragment>
     <fragment
-        android:id="@+id/nav_searchwiz_l0b0"
-        android:name="com.k00221230.fyp.hwms.ui.searchwizard.SearchWizL0B0Fragment"
+        android:id="@+id/nav_searchwiz_componentselect_cpu"
+        android:name="com.k00221230.fyp.hwms.ui.searchwizard.cpu.SearchWizComponentSelectCpuFragment"
         android:label="@string/searchwiz_home"
-        tools:layout="@layout/fragment_searchwiz_home">
+        tools:layout="@layout/fragment_searchwiz_componentselect_cpu">
         <action
-            android:id="@+id/action_HomeSecondFragment_to_HomeFragment"
+            android:id="@+id/action_SearchWizComponentSelectFragment_to_SearchWizHomeFragment"
             app:destination="@id/nav_home" />
 
         <argument

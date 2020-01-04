@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class SearchWizModel : ViewModel() {
+class SearchWizViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
         value = "Welcome to the Search Generation Wizard"
