@@ -35,7 +35,7 @@ class SearchWizHomeFragment : Fragment() {
 
         view.findViewById<Button>(R.id.button_searchwiz_next).setOnClickListener {
             val action = SearchWizHomeFragmentDirections
-                .actionSearchWizHomeFragmentToSearchWizComponentSelectFragment("From search step COMPONENT_SELECT")
+                .actionSearchWizHomeFragmentToSearchWizComponentSelectFragment("From Stage: README")
             NavHostFragment.findNavController(this@SearchWizHomeFragment)
                 .navigate(action)
         }

@@ -40,6 +40,9 @@
         <action
             android:id="@+id/action_SearchWizComponentSelectFragment_to_SearchWizHomeFragment"
             app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_SearchWizComponentSelectFragment_to_SearchWizComponentSelectCpuFragment"
+            app:destination="@id/nav_searchwiz_componentselect_cpu" />
 
         <argument
             android:name="myArg"
