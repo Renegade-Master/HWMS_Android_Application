@@ -41,7 +41,7 @@ class SearchWizCpuIntelI7Fragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         view.findViewById<TextView>(R.id.textview_searchwiz_selectcomponent).text =
-                getString(R.string.hello_searchwiz_component, args.myArg)
+                getString(R.string.hello_searchwiz_cpu_intel_generation, args.myArg)
 
         view.findViewById<Button>(R.id.button_searchwiz_next).setOnClickListener {
             val radioGroup = view.findViewById<RadioGroup>(R.id.radiogrp_searchwiz_selector)
@@ -56,6 +56,10 @@ class SearchWizCpuIntelI7Fragment : Fragment() {
                 "5000" -> {
                     Snackbar.make(view, "Selected 5XXX", Snackbar.LENGTH_SHORT)
                         .setAction("Action", null).show()
+                    val action = SearchWizCpuIntelI7FragmentDirections
+                        .actionSearchWizCpuIntelI7FragmentToSearchWizCpuIntelI75000Fragment("From search step CPU_INTEL_I7")
+                    NavHostFragment.findNavController(this@SearchWizCpuIntelI7Fragment)
+                        .navigate(action)
                 }
                 "6000" -> {
                     Snackbar.make(view, "Selected 6XXX", Snackbar.LENGTH_SHORT)

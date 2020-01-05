@@ -36,9 +36,9 @@
         android:name="com.k00221230.fyp.hwms.ui.searchwizard.SearchWizHomeFragment"
         android:label="@string/searchwiz_home"
         tools:layout="@layout/fragment_searchwiz_home">
-        <!--<action
-            android:id="@+id/action_HomeSecondFragment_to_HomeFragment"
-            app:destination="@id/nav_home" />-->
+        <action
+            android:id="@+id/action_SearchWizHomeFragment_to_HomeFragment"
+            app:destination="@id/nav_home" />
         <action
             android:id="@+id/action_SearchWizHomeFragment_to_SearchWizComponentSelectFragment"
             app:destination="@id/nav_searchwiz_componentselect" />
@@ -173,12 +173,12 @@
         <action
             android:id="@+id/action_SearchWizCpuIntelI7Fragment_to_SearchWizHomeFragment"
             app:destination="@id/nav_home" />
-        <action
+        <!--<action
             android:id="@+id/action_SearchWizCpuIntelI7Fragment_to_SearchWizCpuIntelI74000Fragment"
-            app:destination="@id/nav_home" />
+            app:destination="@id/nav_searchwiz_cpu_intel_i7_4000" />-->
         <action
             android:id="@+id/action_SearchWizCpuIntelI7Fragment_to_SearchWizCpuIntelI75000Fragment"
-            app:destination="@id/nav_home" />
+            app:destination="@id/nav_searchwiz_cpu_intel_i7_5000" />
 
         <argument
             android:name="myArg"

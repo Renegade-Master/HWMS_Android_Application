@@ -18,6 +18,9 @@
     <!-- AMD Generations -->
 
 
+    <!-- AMD CPUs -->
+
+
     <!-- Intel Tiers -->
     <string name="label_cpu_intel_i3">i3</string>
     <string name="label_cpu_intel_i5">i5</string>

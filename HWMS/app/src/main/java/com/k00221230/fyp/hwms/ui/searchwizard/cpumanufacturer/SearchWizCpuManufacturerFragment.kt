@@ -37,7 +37,7 @@ class SearchWizCpuManufacturerFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         view.findViewById<TextView>(R.id.textview_searchwiz_selectcomponent).text =
-                getString(R.string.hello_searchwiz_component, args.myArg)
+                getString(R.string.hello_searchwiz_cpu_manufacturer, args.myArg)
 
         view.findViewById<Button>(R.id.button_searchwiz_next).setOnClickListener {
             val radioGroup = view.findViewById<RadioGroup>(R.id.radiogrp_searchwiz_selector)

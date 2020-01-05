@@ -10,12 +10,14 @@ import android.widget.RadioGroup
 import android.widget.TextView
 
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.google.android.material.snackbar.Snackbar
 
 import com.k00221230.fyp.hwms.R
 import com.k00221230.fyp.hwms.ui.searchwizard.SearchWizViewModel
+import com.k00221230.fyp.hwms.ui.searchwizard.cpumanufacturer.intel.SearchWizCpuManuIntelFragmentDirections
 
 class SearchWizCpuIntelI75000Fragment : Fragment() {
 
@@ -44,7 +46,7 @@ class SearchWizCpuIntelI75000Fragment : Fragment() {
 
             when(selection.tag) {
                 "5820K" -> {
-                    Snackbar.make(view, "Selected 5820K", Snackbar.LENGTH_SHORT)
+                    Snackbar.make(view, "Selected Intel Core i7 5820k", Snackbar.LENGTH_SHORT)
                         .setAction("Action", null).show()
                 }
             }

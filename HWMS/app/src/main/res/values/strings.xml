@@ -28,5 +28,6 @@
     </string>
     <string name="hello_searchwiz_component">Please select a component from the list.\nArg: %1$s</string>
     <string name="hello_searchwiz_cpu_manufacturer">Please select a CPU manufacturer from the list.\nArg: %1$s</string>
-    <string name="hello_searchwiz_cpu_intel">Please select an Intel tier from the list.\nArg: %1$s</string>
+    <string name="hello_searchwiz_cpu_intel_tier">Please select an Intel tier from the list.\nArg: %1$s</string>
+    <string name="hello_searchwiz_cpu_intel_generation">Please select an Intel generation from the list.\nArg: %1$s</string>
 </resources>
