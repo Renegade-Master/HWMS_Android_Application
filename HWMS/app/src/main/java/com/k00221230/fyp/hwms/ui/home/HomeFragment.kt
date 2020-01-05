@@ -35,7 +35,7 @@ class HomeFragment : Fragment() {
 
         view.findViewById<View>(R.id.button_start_searchwiz).setOnClickListener {
             val action = HomeFragmentDirections
-                    .actionHomeFragmentToHomeSecondFragment("From HomeFragment")
+                    .actionHomeFragmentToSearchWizHomeFragment("From HomeFragment")
             NavHostFragment.findNavController(this@HomeFragment)
                     .navigate(action)
         }

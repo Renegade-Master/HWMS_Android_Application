@@ -1,0 +1,40 @@
+<resources>
+    <!-- Hardware Components -->
+    <string name="label_cpu">CPU</string>
+    <string name="label_gpu">GPU</string>
+    <string name="label_motherboard">Motherboard</string>
+    <string name="label_memory">Memory/RAM</string>
+    <string name="label_storage">Storage</string>
+    <string name="label_psu">Power Supply</string>
+    <string name="label_case">Case</string>
+
+    <!-- CPU Manufacturers -->
+    <string name="label_cpu_amd">AMD</string>
+    <string name="label_cpu_intel">Intel</string>
+
+    <!-- AMD Tiers -->
+
+
+    <!-- AMD Generations -->
+
+
+    <!-- Intel Tiers -->
+    <string name="label_cpu_intel_i3">i3</string>
+    <string name="label_cpu_intel_i5">i5</string>
+    <string name="label_cpu_intel_i7">i7</string>
+    <string name="label_cpu_intel_i9">i9</string>
+
+    <!-- Intel Generations -->
+    <string name="label_cpu_intel_4000">4XXX</string>
+    <string name="label_cpu_intel_5000">5XXX</string>
+    <string name="label_cpu_intel_6000">6XXX</string>
+    <string name="label_cpu_intel_7000">7XXX</string>
+    <string name="label_cpu_intel_8000">8XXX</string>
+    <string name="label_cpu_intel_9000">9XXX</string>
+    <string name="label_cpu_intel_10000">10XXX</string>
+
+    <!-- Intel CPUs -->
+    <string name="label_cpu_intel_i7_5820k">Intel Core i7 5820K</string>
+
+
+</resources>

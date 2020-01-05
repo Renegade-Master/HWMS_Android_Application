@@ -33,46 +33,24 @@
         tools:layout_constraintTop_toBottomOf="@id/textview_searchwiz_selectcomponent">
 
         <RadioButton
-            android:id="@+id/radiobtn_component_case"
+            android:id="@+id/radiobtn_cpu_intel_g8000"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/label_case" />
-
+            android:tag="8000"
+            android:text="@string/label_cpu_intel_8000" />
         <RadioButton
-            android:id="@+id/radiobtn_component_cpu"
+            android:id="@+id/radiobtn_cpu_intel_g9000"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/label_cpu" />
-
+            android:tag="9000"
+            android:text="@string/label_cpu_intel_9000" />
         <RadioButton
-            android:id="@+id/radiobtn_component_gpu"
+            android:id="@+id/radiobtn_cpu_intel_g10000"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/label_gpu" />
+            android:tag="10000"
+            android:text="@string/label_cpu_intel_10000" />
 
-        <RadioButton
-            android:id="@+id/radiobtn_component_memory"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/label_memory" />
-
-        <RadioButton
-            android:id="@+id/radiobtn_component_mobo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/label_motherboard" />
-
-        <RadioButton
-            android:id="@+id/radiobtn_component_psu"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/label_psu" />
-
-        <RadioButton
-            android:id="@+id/radiobtn_component_storage"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/label_storage" />
     </RadioGroup>
 
     <Button

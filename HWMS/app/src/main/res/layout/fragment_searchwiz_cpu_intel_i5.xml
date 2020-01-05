@@ -33,53 +33,48 @@
         tools:layout_constraintTop_toBottomOf="@id/textview_searchwiz_selectcomponent">
 
         <RadioButton
-            android:id="@+id/radiobtn_manufacturer_intel"
+            android:id="@+id/radiobtn_cpu_intel_g4000"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:tag="CASE"
-            android:text="@string/label_case" />
-
+            android:tag="4000"
+            android:text="@string/label_cpu_intel_4000" />
         <RadioButton
-            android:id="@+id/radiobtn_manufacturer_amd"
+            android:id="@+id/radiobtn_cpu_intel_g5000"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:tag="CPU"
-            android:text="@string/label_cpu" />
-
+            android:tag="5000"
+            android:text="@string/label_cpu_intel_5000" />
         <RadioButton
-            android:id="@+id/radiobtn_component_gpu"
+            android:id="@+id/radiobtn_cpu_intel_g6000"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:tag="GPU"
-            android:text="@string/label_gpu" />
-
+            android:tag="6000"
+            android:text="@string/label_cpu_intel_6000" />
         <RadioButton
-            android:id="@+id/radiobtn_component_memory"
+            android:id="@+id/radiobtn_cpu_intel_g7000"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:tag="MEMORY"
-            android:text="@string/label_memory" />
-
+            android:tag="7000"
+            android:text="@string/label_cpu_intel_7000" />
         <RadioButton
-            android:id="@+id/radiobtn_component_mobo"
+            android:id="@+id/radiobtn_cpu_intel_g8000"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:tag="MOTHERBOARD"
-            android:text="@string/label_motherboard" />
-
+            android:tag="8000"
+            android:text="@string/label_cpu_intel_8000" />
         <RadioButton
-            android:id="@+id/radiobtn_component_psu"
+            android:id="@+id/radiobtn_cpu_intel_g9000"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:tag="POWERSUPPLY"
-            android:text="@string/label_psu" />
-
+            android:tag="9000"
+            android:text="@string/label_cpu_intel_9000" />
         <RadioButton
-            android:id="@+id/radiobtn_component_storage"
+            android:id="@+id/radiobtn_cpu_intel_g10000"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:tag="STORAGE"
-            android:text="@string/label_storage" />
+            android:tag="10000"
+            android:text="@string/label_cpu_intel_10000" />
+
     </RadioGroup>
 
     <Button

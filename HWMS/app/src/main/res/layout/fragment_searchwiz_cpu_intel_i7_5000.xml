@@ -33,53 +33,11 @@
         tools:layout_constraintTop_toBottomOf="@id/textview_searchwiz_selectcomponent">
 
         <RadioButton
-            android:id="@+id/radiobtn_manufacturer_intel"
+            android:id="@+id/radiobtn_cpu_intel_i7_5820K"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:tag="CASE"
-            android:text="@string/label_case" />
-
-        <RadioButton
-            android:id="@+id/radiobtn_manufacturer_amd"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:tag="CPU"
-            android:text="@string/label_cpu" />
-
-        <RadioButton
-            android:id="@+id/radiobtn_component_gpu"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:tag="GPU"
-            android:text="@string/label_gpu" />
-
-        <RadioButton
-            android:id="@+id/radiobtn_component_memory"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:tag="MEMORY"
-            android:text="@string/label_memory" />
-
-        <RadioButton
-            android:id="@+id/radiobtn_component_mobo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:tag="MOTHERBOARD"
-            android:text="@string/label_motherboard" />
-
-        <RadioButton
-            android:id="@+id/radiobtn_component_psu"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:tag="POWERSUPPLY"
-            android:text="@string/label_psu" />
-
-        <RadioButton
-            android:id="@+id/radiobtn_component_storage"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:tag="STORAGE"
-            android:text="@string/label_storage" />
+            android:tag="5820K"
+            android:text="@string/label_cpu_intel_i7_5820k" />
     </RadioGroup>
 
     <Button

@@ -1,4 +1,4 @@
-package com.k00221230.fyp.hwms.ui.searchwizard.cpu
+package com.k00221230.fyp.hwms.ui.searchwizard.cpumanufacturer.amd
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -14,11 +14,11 @@ import androidx.navigation.fragment.navArgs
 import com.k00221230.fyp.hwms.R
 import com.k00221230.fyp.hwms.ui.searchwizard.SearchWizViewModel
 
-class SearchWizComponentSelectCpuFragment : Fragment() {
+class SearchWizCpuManuAmdFragment : Fragment() {
 
-    private val args: SearchWizComponentSelectCpuFragmentArgs by navArgs()
+    private val args: SearchWizCpuManuAmdFragmentArgs by navArgs()
 
-    private lateinit var SearchWizComponentSelectCpuViewModel: SearchWizViewModel
+    private lateinit var SearchWizCpuManuIntelViewModel: SearchWizViewModel
 
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,

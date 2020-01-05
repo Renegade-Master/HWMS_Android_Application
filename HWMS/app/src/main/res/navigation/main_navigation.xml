@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+<!--
+    /*********************\
+    |   MAIN NAVIGATION   |
+    \*********************/
+-->
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.k00221230.fyp.hwms.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_HomeFragment_to_SearchWizHomeFragment"
+            app:destination="@id/nav_searchwiz_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_searchhistory"
+        android:name="com.k00221230.fyp.hwms.ui.searchhistory.SearchHistoryFragment"
+        android:label="@string/menu_searchhistory"
+        tools:layout="@layout/fragment_searchhistory" />
+<!--
+    /*******************\
+    |   SEARCH WIZARD   |
+    \*******************/
+-->
+    <!-- Home -->
+    <fragment
+        android:id="@+id/nav_searchwiz_home"
+        android:name="com.k00221230.fyp.hwms.ui.searchwizard.SearchWizHomeFragment"
+        android:label="@string/searchwiz_home"
+        tools:layout="@layout/fragment_searchwiz_home">
+        <!--<action
+            android:id="@+id/action_HomeSecondFragment_to_HomeFragment"
+            app:destination="@id/nav_home" />-->
+        <action
+            android:id="@+id/action_SearchWizHomeFragment_to_SearchWizComponentSelectFragment"
+            app:destination="@id/nav_searchwiz_componentselect" />
+
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_searchwiz_componentselect"
+        android:name="com.k00221230.fyp.hwms.ui.searchwizard.SearchWizComponentSelectFragment"
+        android:label="@string/searchwiz_home"
+        tools:layout="@layout/fragment_searchwiz_componentselect">
+        <action
+            android:id="@+id/action_SearchWizComponentSelectFragment_to_SearchWizHomeFragment"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_SearchWizComponentSelectFragment_to_SearchWizCpuManufacturerFragment"
+            app:destination="@id/nav_searchwiz_cpumanufacturer" />
+        <!--<action
+            android:id="@+id/action_SearchWizComponentSelectFragment_to_SearchWizGpuManufacturerFragment"
+            app:destination="@id/nav_searchwiz_gpumanufacturer" />-->
+
+        <argument
+            android:name="selectedComponent"
+            app:argType="string" />
+    </fragment>
+
+    <!-- CPU Manufacturer -->
+    <fragment
+        android:id="@+id/nav_searchwiz_cpumanufacturer"
+        android:name="com.k00221230.fyp.hwms.ui.searchwizard.cpumanufacturer.SearchWizCpuManufacturerFragment"
+        android:label="@string/searchwiz_home"
+        tools:layout="@layout/fragment_searchwiz_cpumanufacturer">
+        <action
+            android:id="@+id/action_SearchWizCpuManufacturerFragment_to_SearchWizHomeFragment"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_SearchWizCpuManufacturerFragment_to_SearchWizCpuManuIntelFragment"
+            app:destination="@id/nav_searchwiz_cpumanu_intel" />
+        <action
+            android:id="@+id/action_SearchWizCpuManufacturerFragment_to_SearchWizCpuManuAmdFragment"
+            app:destination="@id/nav_searchwiz_cpumanu_amd" />
+
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_searchwiz_cpumanu_amd"
+        android:name="com.k00221230.fyp.hwms.ui.searchwizard.cpumanufacturer.amd.SearchWizCpuManuAmdFragment"
+        android:label="@string/searchwiz_home"
+        tools:layout="@layout/fragment_searchwiz_componentselect">
+        <action
+            android:id="@+id/action_SearchWizCpuManuAmdFragment_to_SearchWizHomeFragment"
+            app:destination="@id/nav_home" />
+
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_searchwiz_cpumanu_intel"
+        android:name="com.k00221230.fyp.hwms.ui.searchwizard.cpumanufacturer.intel.SearchWizCpuManuIntelFragment"
+        android:label="@string/searchwiz_home"
+        tools:layout="@layout/fragment_searchwiz_cpu_intel">
+        <action
+            android:id="@+id/action_SearchWizCpuManuIntelFragment_to_SearchWizHomeFragment"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_SearchWizCpuManuIntelFragment_to_SearchWizCpuIntelI3Fragment"
+            app:destination="@id/nav_searchwiz_cpu_intel_i3" />
+        <action
+            android:id="@+id/action_SearchWizCpuManuIntelFragment_to_SearchWizCpuIntelI5Fragment"
+            app:destination="@id/nav_searchwiz_cpu_intel_i5" />
+        <action
+            android:id="@+id/action_SearchWizCpuManuIntelFragment_to_SearchWizCpuIntelI7Fragment"
+            app:destination="@id/nav_searchwiz_cpu_intel_i7" />
+        <action
+            android:id="@+id/action_SearchWizCpuManuIntelFragment_to_SearchWizCpuIntelI9Fragment"
+            app:destination="@id/nav_searchwiz_cpu_intel_i9" />
+
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+    </fragment>
+
+    <!-- Intel Tiers -->
+    <fragment
+        android:id="@+id/nav_searchwiz_cpu_intel_i3"
+        android:name="com.k00221230.fyp.hwms.ui.searchwizard.cpumanufacturer.intel.i3.SearchWizCpuIntelI3Fragment"
+        android:label="@string/searchwiz_home"
+        tools:layout="@layout/fragment_searchwiz_cpu_intel_i3">
+        <action
+            android:id="@+id/action_SearchWizCpuIntelI3Fragment_to_SearchWizHomeFragment"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_SearchWizCpuIntelI3Fragment_to_SearchWizCpuIntelI34000Fragment"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_SearchWizCpuIntelI3Fragment_to_SearchWizCpuIntelI35000Fragment"
+            app:destination="@id/nav_home" />
+
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_searchwiz_cpu_intel_i5"
+        android:name="com.k00221230.fyp.hwms.ui.searchwizard.cpumanufacturer.intel.i5.SearchWizCpuIntelI5Fragment"
+        android:label="@string/searchwiz_home"
+        tools:layout="@layout/fragment_searchwiz_cpu_intel_i5">
+        <action
+            android:id="@+id/action_SearchWizCpuIntelI5Fragment_to_SearchWizHomeFragment"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_SearchWizCpuIntelI5Fragment_to_SearchWizCpuIntelI54000Fragment"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_SearchWizCpuIntelI5Fragment_to_SearchWizCpuIntelI55000Fragment"
+            app:destination="@id/nav_home" />
+
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_searchwiz_cpu_intel_i7"
+        android:name="com.k00221230.fyp.hwms.ui.searchwizard.cpumanufacturer.intel.i7.SearchWizCpuIntelI7Fragment"
+        android:label="@string/searchwiz_home"
+        tools:layout="@layout/fragment_searchwiz_cpu_intel_i3">
+        <action
+            android:id="@+id/action_SearchWizCpuIntelI7Fragment_to_SearchWizHomeFragment"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_SearchWizCpuIntelI7Fragment_to_SearchWizCpuIntelI74000Fragment"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_SearchWizCpuIntelI7Fragment_to_SearchWizCpuIntelI75000Fragment"
+            app:destination="@id/nav_home" />
+
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_searchwiz_cpu_intel_i9"
+        android:name="com.k00221230.fyp.hwms.ui.searchwizard.cpumanufacturer.intel.i9.SearchWizCpuIntelI9Fragment"
+        android:label="@string/searchwiz_home"
+        tools:layout="@layout/fragment_searchwiz_cpu_intel_i9">
+        <action
+            android:id="@+id/action_SearchWizCpuIntelI9Fragment_to_SearchWizHomeFragment"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_SearchWizCpuIntelI9Fragment_to_SearchWizCpuIntelI94000Fragment"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_SearchWizCpuIntelI9Fragment_to_SearchWizCpuIntelI95000Fragment"
+            app:destination="@id/nav_home" />
+
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+    </fragment>
+
+    <!-- Intel Generations -->
+    <fragment
+        android:id="@+id/nav_searchwiz_cpu_intel_i7_5000"
+        android:name="com.k00221230.fyp.hwms.ui.searchwizard.cpumanufacturer.intel.i7.g5XXX.SearchWizCpuIntelI75000Fragment"
+        android:label="@string/searchwiz_home"
+        tools:layout="@layout/fragment_searchwiz_cpu_intel_i7_5000">
+        <action
+            android:id="@+id/action_SearchWizCpuIntelI75000Fragment_to_SearchWizHomeFragment"
+            app:destination="@id/nav_home" />
+
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+    </fragment>
+
+    <!-- GPU Manufacturer -->
+    <!--<fragment
+        android:id="@+id/nav_searchwiz_componentselect_gpumanufacturer"
+        android:name="com.k00221230.fyp.hwms.ui.searchwizard.gpumanufacturer.SearchWizComponentSelectGpuManufacturerFragment"
+        android:label="@string/searchwiz_home"
+        tools:layout="@layout/fragment_searchwiz_componentselect">
+        <action
+            android:id="@+id/action_SearchWizComponentSelectGpuManufacturerFragment_to_SearchWizHomeFragment"
+            app:destination="@id/nav_home" />
+
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+    </fragment>-->
+</navigation>

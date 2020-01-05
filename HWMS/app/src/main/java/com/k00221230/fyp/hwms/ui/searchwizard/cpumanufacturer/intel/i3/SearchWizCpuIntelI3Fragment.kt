@@ -1,4 +1,4 @@
-package com.k00221230.fyp.hwms.ui.searchwizard
+package com.k00221230.fyp.hwms.ui.searchwizard.cpumanufacturer.intel.i3
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,16 +11,21 @@ import android.widget.TextView
 
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.google.android.material.snackbar.Snackbar
 
 import com.k00221230.fyp.hwms.R
+import com.k00221230.fyp.hwms.ui.searchwizard.SearchWizViewModel
+import com.k00221230.fyp.hwms.ui.searchwizard.cpumanufacturer.SearchWizCpuManufacturerFragmentDirections
+import com.k00221230.fyp.hwms.ui.searchwizard.cpumanufacturer.intel.SearchWizCpuManuIntelFragmentArgs
+import com.k00221230.fyp.hwms.ui.searchwizard.cpumanufacturer.intel.SearchWizCpuManuIntelFragmentDirections
 
-class SearchWizComponentSelectFragment : Fragment() {
+class SearchWizCpuIntelI3Fragment : Fragment() {
 
-    private val args: SearchWizComponentSelectFragmentArgs by navArgs()
+    private val args: SearchWizCpuIntelI3FragmentArgs by navArgs()
 
-    private lateinit var searchWizComponentSelectViewModel: SearchWizViewModel
+    private lateinit var SearchWizCpuIntelI3ViewModel: SearchWizViewModel
 
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
@@ -34,7 +39,7 @@ class SearchWizComponentSelectFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         view.findViewById<TextView>(R.id.textview_searchwiz_selectcomponent).text =
-                getString(R.string.hello_searchwiz_component, args.selectedComponent)
+                getString(R.string.hello_searchwiz_component, args.myArg)
 
         view.findViewById<Button>(R.id.button_searchwiz_next).setOnClickListener {
             val radioGroup = view.findViewById<RadioGroup>(R.id.radiogrp_searchwiz_selector)
@@ -42,42 +47,36 @@ class SearchWizComponentSelectFragment : Fragment() {
             val selection = radioGroup.findViewById<RadioButton>(selectionId)
 
             when(selection.tag) {
-                "CASE" -> {
-                    Snackbar.make(view, "Selected Case", Snackbar.LENGTH_SHORT)
+                "4000" -> {
+                    Snackbar.make(view, "Selected 4XXX", Snackbar.LENGTH_SHORT)
                         .setAction("Action", null).show()
                 }
-                "CPU" -> {
-                    Snackbar.make(view, "Selected CPU", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show()
-                    val action = SearchWizComponentSelectFragmentDirections
-                        .actionSearchWizComponentSelectFragmentToSearchWizCpuManufacturerFragment("From search step COMPONENT_SELECT")
-                    NavHostFragment.findNavController(this@SearchWizComponentSelectFragment)
-                        .navigate(action)
-
-                }
-                "GPU" ->{
-                    Snackbar.make(view, "Selected GPU", Snackbar.LENGTH_SHORT)
+                "5000" -> {
+                    Snackbar.make(view, "Selected 5XXX", Snackbar.LENGTH_SHORT)
                         .setAction("Action", null).show()
                 }
-                "MEMORY" ->{
-                    Snackbar.make(view, "Selected Memory/RAM", Snackbar.LENGTH_SHORT)
+                "6000" -> {
+                    Snackbar.make(view, "Selected 6XXX", Snackbar.LENGTH_SHORT)
                         .setAction("Action", null).show()
                 }
-                "MOTHERBOARD" ->{
-                    Snackbar.make(view, "Selected Motherboard", Snackbar.LENGTH_SHORT)
+                "7000" -> {
+                    Snackbar.make(view, "Selected 7XXX", Snackbar.LENGTH_SHORT)
                         .setAction("Action", null).show()
                 }
-                "POWERSUPPLY" ->{
-                    Snackbar.make(view, "Selected Power Supply", Snackbar.LENGTH_SHORT)
+                "8000" -> {
+                    Snackbar.make(view, "Selected 8XXX", Snackbar.LENGTH_SHORT)
                         .setAction("Action", null).show()
                 }
-                "STORAGE" ->{
-                    Snackbar.make(view, "Selected Storage", Snackbar.LENGTH_SHORT)
+                "9000" -> {
+                    Snackbar.make(view, "Selected 9XXX", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show()
+                }
+                "10000" -> {
+                    Snackbar.make(view, "Selected 10XXX", Snackbar.LENGTH_SHORT)
                         .setAction("Action", null).show()
                 }
             }
-
-            //findNavController().navigate(R.id.action_SearchWizComponentSelectFragment_to_SearchWizHomeFragment)
+            findNavController().navigate(R.id.action_SearchWizCpuIntelI3Fragment_to_SearchWizHomeFragment)
         }
     }
 }
