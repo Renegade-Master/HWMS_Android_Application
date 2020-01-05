@@ -137,10 +137,10 @@
             app:destination="@id/nav_home" />
         <action
             android:id="@+id/action_SearchWizCpuIntelI3Fragment_to_SearchWizCpuIntelI34000Fragment"
-            app:destination="@id/nav_home" />
-        <action
+            app:destination="@id/nav_searchwiz_cpu_intel_i3_4000" />
+        <!--<action
             android:id="@+id/action_SearchWizCpuIntelI3Fragment_to_SearchWizCpuIntelI35000Fragment"
-            app:destination="@id/nav_home" />
+            app:destination="@id/nav_searchwiz_cpu_intel_i3_5000" />-->
 
         <argument
             android:name="myArg"
@@ -204,7 +204,20 @@
             app:argType="string" />
     </fragment>
 
-    <!-- Intel Generations -->
+    <!-- Intel CPU Lists -->
+    <fragment
+        android:id="@+id/nav_searchwiz_cpu_intel_i3_4000"
+        android:name="com.k00221230.fyp.hwms.ui.searchwizard.cpumanufacturer.intel.i3.g4XXX.SearchWizCpuIntelI34000Fragment"
+        android:label="@string/searchwiz_home"
+        tools:layout="@layout/fragment_searchwiz_cpu_intel_i3_4000">
+        <action
+            android:id="@+id/action_SearchWizCpuIntelI34000Fragment_to_SearchWizHomeFragment"
+            app:destination="@id/nav_home" />
+
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+    </fragment>
     <fragment
         android:id="@+id/nav_searchwiz_cpu_intel_i7_5000"
         android:name="com.k00221230.fyp.hwms.ui.searchwizard.cpumanufacturer.intel.i7.g5XXX.SearchWizCpuIntelI75000Fragment"

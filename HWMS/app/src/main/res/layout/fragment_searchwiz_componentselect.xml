@@ -33,14 +33,14 @@
         tools:layout_constraintTop_toBottomOf="@id/textview_searchwiz_selectcomponent">
 
         <RadioButton
-            android:id="@+id/radiobtn_manufacturer_intel"
+            android:id="@+id/radiobtn_component_case"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:tag="CASE"
             android:text="@string/label_case" />
 
         <RadioButton
-            android:id="@+id/radiobtn_manufacturer_amd"
+            android:id="@+id/radiobtn_component_cpu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:tag="CPU"

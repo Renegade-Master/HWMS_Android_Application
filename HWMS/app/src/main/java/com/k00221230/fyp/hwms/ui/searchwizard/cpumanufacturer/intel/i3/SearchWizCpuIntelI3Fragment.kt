@@ -11,15 +11,11 @@ import android.widget.TextView
 
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.google.android.material.snackbar.Snackbar
 
 import com.k00221230.fyp.hwms.R
 import com.k00221230.fyp.hwms.ui.searchwizard.SearchWizViewModel
-import com.k00221230.fyp.hwms.ui.searchwizard.cpumanufacturer.SearchWizCpuManufacturerFragmentDirections
-import com.k00221230.fyp.hwms.ui.searchwizard.cpumanufacturer.intel.SearchWizCpuManuIntelFragmentArgs
-import com.k00221230.fyp.hwms.ui.searchwizard.cpumanufacturer.intel.SearchWizCpuManuIntelFragmentDirections
 
 class SearchWizCpuIntelI3Fragment : Fragment() {
 
@@ -32,7 +28,7 @@ class SearchWizCpuIntelI3Fragment : Fragment() {
             savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_searchwiz_componentselect, container, false)
+        return inflater.inflate(R.layout.fragment_searchwiz_cpu_intel_i3, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -50,6 +46,10 @@ class SearchWizCpuIntelI3Fragment : Fragment() {
                 "4000" -> {
                     Snackbar.make(view, "Selected 4XXX", Snackbar.LENGTH_SHORT)
                         .setAction("Action", null).show()
+                    val action = SearchWizCpuIntelI3FragmentDirections
+                        .actionSearchWizCpuIntelI3FragmentToSearchWizCpuIntelI34000Fragment("From search step CPU_INTEL_I3")
+                    NavHostFragment.findNavController(this@SearchWizCpuIntelI3Fragment)
+                        .navigate(action)
                 }
                 "5000" -> {
                     Snackbar.make(view, "Selected 5XXX", Snackbar.LENGTH_SHORT)
@@ -76,7 +76,7 @@ class SearchWizCpuIntelI3Fragment : Fragment() {
                         .setAction("Action", null).show()
                 }
             }
-            findNavController().navigate(R.id.action_SearchWizCpuIntelI3Fragment_to_SearchWizHomeFragment)
+            //findNavController().navigate(R.id.action_SearchWizCpuIntelI3Fragment_to_SearchWizHomeFragment)
         }
     }
 }
