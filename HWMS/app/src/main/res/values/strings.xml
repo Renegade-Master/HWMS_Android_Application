@@ -30,4 +30,13 @@
     <string name="hello_searchwiz_cpu_manufacturer">Please select a CPU manufacturer from the list.\nArg: %1$s</string>
     <string name="hello_searchwiz_cpu_intel_tier">Please select an Intel tier from the list.\nArg: %1$s</string>
     <string name="hello_searchwiz_cpu_intel_generation">Please select an Intel generation from the list.\nArg: %1$s</string>
+
+    <!-- Hardware Components -->
+    <string name="label_cpu">CPU</string>
+    <string name="label_gpu">GPU</string>
+    <string name="label_motherboard">Motherboard</string>
+    <string name="label_memory">Memory/RAM</string>
+    <string name="label_storage">Storage</string>
+    <string name="label_psu">Power Supply</string>
+    <string name="label_case">Case</string>
 </resources>

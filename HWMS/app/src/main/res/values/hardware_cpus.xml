@@ -1,0 +1,218 @@
+<resources>
+    <!-- CPU Manufacturers -->
+    <string name="label_cpu_amd">AMD</string>
+    <string name="label_cpu_intel">Intel</string>
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+    <!-- AMD Tiers -->
+
+
+    <!-- AMD Generations -->
+
+
+    <!-- AMD CPUs -->
+
+
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
+    <!-- Intel Tiers -->
+    <string name="label_cpu_intel_i3">i3</string>
+    <string name="label_cpu_intel_i5">i5</string>
+    <string name="label_cpu_intel_i7">i7</string>
+    <string name="label_cpu_intel_i9">i9</string>
+
+    <!-- Intel Generations -->
+    <string name="label_cpu_intel_4000">4XXX</string>
+    <string name="label_cpu_intel_5000">5XXX</string>
+    <string name="label_cpu_intel_6000">6XXX</string>
+    <string name="label_cpu_intel_7000">7XXX</string>
+    <string name="label_cpu_intel_8000">8XXX</string>
+    <string name="label_cpu_intel_9000">9XXX</string>
+    <string name="label_cpu_intel_10000">10XXX</string>
+
+    <!-- Intel CPUs -->
+    <!-- i3 -->
+    <string name="label_cpu_intel_i3_4130">Intel Core i3 4130</string>
+    <string name="label_cpu_intel_i3_4130t">Intel Core i3 4130T</string>
+    <string name="label_cpu_intel_i3_4150">Intel Core i3 4150</string>
+    <string name="label_cpu_intel_i3_4150t">Intel Core i3 4150T</string>
+    <string name="label_cpu_intel_i3_4160">Intel Core i3 4160</string>
+    <string name="label_cpu_intel_i3_4160t">Intel Core i3 4160T</string>
+    <string name="label_cpu_intel_i3_4170">Intel Core i3 4170</string>
+    <string name="label_cpu_intel_i3_4170t">Intel Core i3 4170T</string>
+    <string name="label_cpu_intel_i3_4330">Intel Core i3 4330</string>
+    <string name="label_cpu_intel_i3_4330t">Intel Core i3 4330T</string>
+    <string name="label_cpu_intel_i3_4340">Intel Core i3 4340</string>
+    <string name="label_cpu_intel_i3_4350">Intel Core i3 4350</string>
+    <string name="label_cpu_intel_i3_4350t">Intel Core i3 4350T</string>
+    <string name="label_cpu_intel_i3_4360">Intel Core i3 4360</string>
+    <string name="label_cpu_intel_i3_4360t">Intel Core i3 4360T</string>
+    <string name="label_cpu_intel_i3_4370">Intel Core i3 4370</string>
+    <string name="label_cpu_intel_i3_4370t">Intel Core i3 4370T</string>
+
+    <string name="label_cpu_intel_i3_6098p">Intel Core i3 6098P</string>
+    <string name="label_cpu_intel_i3_6100">Intel Core i3 6100</string>
+    <string name="label_cpu_intel_i3_6100t">Intel Core i3 6100T</string>
+    <string name="label_cpu_intel_i3_6300">Intel Core i3 6300</string>
+    <string name="label_cpu_intel_i3_6300t">Intel Core i3 6300T</string>
+    <string name="label_cpu_intel_i3_6320">Intel Core i3 6320</string>
+
+    <string name="label_cpu_intel_i3_7100">Intel Core i3 7100</string>
+    <string name="label_cpu_intel_i3_7100t">Intel Core i3 7100T</string>
+    <string name="label_cpu_intel_i3_7101e">Intel Core i3 7101E</string>
+    <string name="label_cpu_intel_i3_7101te">Intel Core i3 7101TE</string>
+    <string name="label_cpu_intel_i3_7300">Intel Core i3 7300</string>
+    <string name="label_cpu_intel_i3_7300t">Intel Core i3 7300T</string>
+    <string name="label_cpu_intel_i3_7320">Intel Core i3 7320</string>
+    <string name="label_cpu_intel_i3_7350k">Intel Core i3 7350K</string>
+
+    <string name="label_cpu_intel_i3_8100">Intel Core i3 8100</string>
+    <string name="label_cpu_intel_i3_8100t">Intel Core i3 8100T</string>
+    <string name="label_cpu_intel_i3_8300">Intel Core i3 8300</string>
+    <string name="label_cpu_intel_i3_8300t">Intel Core i3 8300T</string>
+    <string name="label_cpu_intel_i3_8350k">Intel Core i3 8350K</string>
+
+    <string name="label_cpu_intel_i3_9100">Intel Core i3 9100</string>
+    <string name="label_cpu_intel_i3_9100f">Intel Core i3 9100F</string>
+    <string name="label_cpu_intel_i3_9100t">Intel Core i3 9100T</string>
+    <string name="label_cpu_intel_i3_9300">Intel Core i3 9300</string>
+    <string name="label_cpu_intel_i3_9300t">Intel Core i3 9300T</string>
+    <string name="label_cpu_intel_i3_9320">Intel Core i3 9320</string>
+    <string name="label_cpu_intel_i3_9350k">Intel Core i3 9350K</string>
+    <string name="label_cpu_intel_i3_9350kf">Intel Core i3 9350KF</string>
+
+    <!-- i5 -->
+    <string name="label_cpu_intel_i5_4430">Intel Core i5 4430</string>
+    <string name="label_cpu_intel_i5_4430s">Intel Core i5 4430S</string>
+    <string name="label_cpu_intel_i5_4440">Intel Core i5 4440</string>
+    <string name="label_cpu_intel_i5_4440s">Intel Core i5 4440S</string>
+    <string name="label_cpu_intel_i5_4460">Intel Core i5 4460</string>
+    <string name="label_cpu_intel_i5_4460s">Intel Core i5 4460S</string>
+    <string name="label_cpu_intel_i5_4460t">Intel Core i5 4460T</string>
+    <string name="label_cpu_intel_i5_4570">Intel Core i5 4570</string>
+    <string name="label_cpu_intel_i5_4570r">Intel Core i5 4570R</string>
+    <string name="label_cpu_intel_i5_4570s">Intel Core i5 4570S</string>
+    <string name="label_cpu_intel_i5_4570t">Intel Core i5 4570T</string>
+    <string name="label_cpu_intel_i5_4590">Intel Core i5 4590</string>
+    <string name="label_cpu_intel_i5_4590s">Intel Core i5 4590S</string>
+    <string name="label_cpu_intel_i5_4590t">Intel Core i5 4590T</string>
+    <string name="label_cpu_intel_i5_4670">Intel Core i5 4670</string>
+    <string name="label_cpu_intel_i5_4670k">Intel Core i5 4670K</string>
+    <string name="label_cpu_intel_i5_4670r">Intel Core i5 4670R</string>
+    <string name="label_cpu_intel_i5_4670s">Intel Core i5 4670S</string>
+    <string name="label_cpu_intel_i5_4670t">Intel Core i5 4670T</string>
+    <string name="label_cpu_intel_i5_4690">Intel Core i5 4690</string>
+    <string name="label_cpu_intel_i5_4690k">Intel Core i5 4690K</string>
+    <string name="label_cpu_intel_i5_4690s">Intel Core i5 4690S</string>
+    <string name="label_cpu_intel_i5_4690t">Intel Core i5 4690T</string>
+
+    <string name="label_cpu_intel_i5_5575r">Intel Core i5 5575R</string>
+    <string name="label_cpu_intel_i5_5675c">Intel Core i5 5675C</string>
+    <string name="label_cpu_intel_i5_5675r">Intel Core i5 5675R</string>
+
+    <string name="label_cpu_intel_i5_6400">Intel Core i5 6400</string>
+    <string name="label_cpu_intel_i5_6400t">Intel Core i5 6400T</string>
+    <string name="label_cpu_intel_i5_6402p">Intel Core i5 6402P</string>
+    <string name="label_cpu_intel_i5_6500">Intel Core i5 6500</string>
+    <string name="label_cpu_intel_i5_6500t">Intel Core i5 6500T</string>
+    <string name="label_cpu_intel_i5_6585r">Intel Core i5 6585R</string>
+    <string name="label_cpu_intel_i5_6600">Intel Core i5 6600</string>
+    <string name="label_cpu_intel_i5_6600k">Intel Core i5 6600K</string>
+    <string name="label_cpu_intel_i5_6600t">Intel Core i5 6600T</string>
+    <string name="label_cpu_intel_i5_6685r">Intel Core i5 6685R</string>
+
+    <string name="label_cpu_intel_i5_7400">Intel Core i5 7400</string>
+    <string name="label_cpu_intel_i5_7400t">Intel Core i5 7400T</string>
+    <string name="label_cpu_intel_i5_7500">Intel Core i5 7500</string>
+    <string name="label_cpu_intel_i5_7500t">Intel Core i5 7500T</string>
+    <string name="label_cpu_intel_i5_7600">Intel Core i5 7600</string>
+    <string name="label_cpu_intel_i5_7600k">Intel Core i5 7600K</string>
+    <string name="label_cpu_intel_i5_7600t">Intel Core i5 7600T</string>
+
+    <string name="label_cpu_intel_i5_8400">Intel Core i5 8400</string>
+    <string name="label_cpu_intel_i5_8400t">Intel Core i5 8400T</string>
+    <string name="label_cpu_intel_i5_8500">Intel Core i5 8500</string>
+    <string name="label_cpu_intel_i5_8500t">Intel Core i5 8500T</string>
+    <string name="label_cpu_intel_i5_8600">Intel Core i5 8600</string>
+    <string name="label_cpu_intel_i5_8600k">Intel Core i5 8600K</string>
+    <string name="label_cpu_intel_i5_8600t">Intel Core i5 8600T</string>
+
+    <string name="label_cpu_intel_i5_9400">Intel Core i5 9400</string>
+    <string name="label_cpu_intel_i5_9400f">Intel Core i5 9400F</string>
+    <string name="label_cpu_intel_i5_9400t">Intel Core i5 9400T</string>
+    <string name="label_cpu_intel_i5_9500">Intel Core i5 9500</string>
+    <string name="label_cpu_intel_i5_9500f">Intel Core i5 9500F</string>
+    <string name="label_cpu_intel_i5_9500t">Intel Core i5 9500T</string>
+    <string name="label_cpu_intel_i5_9600">Intel Core i5 9600</string>
+    <string name="label_cpu_intel_i5_9600k">Intel Core i5 9600K</string>
+    <string name="label_cpu_intel_i5_9600kf">Intel Core i5 9600KF</string>
+    <string name="label_cpu_intel_i5_9600t">Intel Core i5 9600T</string>
+
+    <!-- i7 -->
+    <string name="label_cpu_intel_i7_4765t">Intel Core i7 4765T</string>
+    <string name="label_cpu_intel_i7_4770">Intel Core i7 4770</string>
+    <string name="label_cpu_intel_i7_4770k">Intel Core i7 4770K</string>
+    <string name="label_cpu_intel_i7_4770r">Intel Core i7 4770R</string>
+    <string name="label_cpu_intel_i7_4770s">Intel Core i7 4770S</string>
+    <string name="label_cpu_intel_i7_4770t">Intel Core i7 4770T</string>
+    <string name="label_cpu_intel_i7_4771">Intel Core i7 4771</string>
+    <string name="label_cpu_intel_i7_4785t">Intel Core i7 4785T</string>
+    <string name="label_cpu_intel_i7_4790">Intel Core i7 4790</string>
+    <string name="label_cpu_intel_i7_4790k">Intel Core i7 4790K</string>
+    <string name="label_cpu_intel_i7_4790s">Intel Core i7 4790S</string>
+    <string name="label_cpu_intel_i7_4790t">Intel Core i7 4790T</string>
+    <string name="label_cpu_intel_i7_4820k">Intel Core i7 4820K</string>
+    <string name="label_cpu_intel_i7_4930k">Intel Core i7 4930K</string>
+    <string name="label_cpu_intel_i7_4960x">Intel Core i7 4960X</string>
+
+    <string name="label_cpu_intel_i7_5775c">Intel Core i7 5775C</string>
+    <string name="label_cpu_intel_i7_5775r">Intel Core i7 5775R</string>
+    <string name="label_cpu_intel_i7_5820k">Intel Core i7 5820K</string>
+    <string name="label_cpu_intel_i7_5930k">Intel Core i7 5930K</string>
+    <string name="label_cpu_intel_i7_5960x">Intel Core i7 5960X</string>
+
+    <string name="label_cpu_intel_i7_6700">Intel Core i7 6700</string>
+    <string name="label_cpu_intel_i7_6700k">Intel Core i7 6700K</string>
+    <string name="label_cpu_intel_i7_6700t">Intel Core i7 6700T</string>
+    <string name="label_cpu_intel_i7_6785r">Intel Core i7 6785R</string>
+    <string name="label_cpu_intel_i7_6800k">Intel Core i7 6800K</string>
+    <string name="label_cpu_intel_i7_6850k">Intel Core i7 6850K</string>
+    <string name="label_cpu_intel_i7_6900k">Intel Core i7 6900K</string>
+    <string name="label_cpu_intel_i7_6950x">Intel Core i7 6950X</string>
+
+    <string name="label_cpu_intel_i7_7700">Intel Core i7 7700</string>
+    <string name="label_cpu_intel_i7_7700k">Intel Core i7 7700K</string>
+    <string name="label_cpu_intel_i7_7700t">Intel Core i7 7700T</string>
+    <string name="label_cpu_intel_i7_7740x">Intel Core i7 7740X</string>
+    <string name="label_cpu_intel_i7_7800x">Intel Core i7 7800X</string>
+    <string name="label_cpu_intel_i7_7820x">Intel Core i7 7820X</string>
+
+    <string name="label_cpu_intel_i7_8086k">Intel Core i7 8086K</string>
+    <string name="label_cpu_intel_i7_8700">Intel Core i7 8700</string>
+    <string name="label_cpu_intel_i7_8700k">Intel Core i7 8700K</string>
+    <string name="label_cpu_intel_i7_8700t">Intel Core i7 8700T</string>
+
+    <string name="label_cpu_intel_i7_9700">Intel Core i7 9700</string>
+    <string name="label_cpu_intel_i7_9700f">Intel Core i7 9700F</string>
+    <string name="label_cpu_intel_i7_9700k">Intel Core i7 9700K</string>
+    <string name="label_cpu_intel_i7_9700kf">Intel Core i7 9700KF</string>
+    <string name="label_cpu_intel_i7_9700t">Intel Core i7 9700T</string>
+    <string name="label_cpu_intel_i7_9800x">Intel Core i7 9800X</string>
+
+    <!-- i9 -->
+    <string name="label_cpu_intel_i9_9820x">Intel Core i9 9820X</string>
+    <string name="label_cpu_intel_i9_9900">Intel Core i9 9900</string>
+    <string name="label_cpu_intel_i9_9900k">Intel Core i9 9900K</string>
+    <string name="label_cpu_intel_i9_9900kf">Intel Core i9 9900KF</string>
+    <string name="label_cpu_intel_i9_9900ks">Intel Core i9 9900KS</string>
+    <string name="label_cpu_intel_i9_9900t">Intel Core i9 9900T</string>
+    <string name="label_cpu_intel_i9_9900x">Intel Core i9 9900X</string>
+    <string name="label_cpu_intel_i9_9920x">Intel Core i9 9920X</string>
+    <string name="label_cpu_intel_i9_9940x">Intel Core i9 9940X</string>
+    <string name="label_cpu_intel_i9_9960x">Intel Core i9 9960X</string>
+    <string name="label_cpu_intel_i9_9980xe">Intel Core i9 9980XE</string>
+
+</resources>

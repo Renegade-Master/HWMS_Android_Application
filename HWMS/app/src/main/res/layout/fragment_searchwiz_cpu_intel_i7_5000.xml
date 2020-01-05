@@ -33,11 +33,23 @@
         tools:layout_constraintTop_toBottomOf="@id/textview_searchwiz_selectcomponent">
 
         <RadioButton
-            android:id="@+id/radiobtn_cpu_intel_i7_5820K"
+            android:id="@+id/radiobtn_cpu_intel_i7_5820k"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:tag="5820K"
             android:text="@string/label_cpu_intel_i7_5820k" />
+        <RadioButton
+            android:id="@+id/radiobtn_cpu_intel_i7_5930k"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:tag="5930K"
+            android:text="@string/label_cpu_intel_i7_5930k" />
+        <RadioButton
+            android:id="@+id/radiobtn_cpu_intel_i7_5960x"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:tag="5960X"
+            android:text="@string/label_cpu_intel_i7_5960x" />
     </RadioGroup>
 
     <Button
