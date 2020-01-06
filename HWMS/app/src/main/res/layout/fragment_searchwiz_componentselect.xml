@@ -14,73 +14,83 @@
         android:text="Lorem Ipsum"
         android:textAlignment="center"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@id/radiogrp_searchwiz_selector"
+        app:layout_constraintBottom_toTopOf="@id/scrollview_searchwiz_selector"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <RadioGroup
-        android:id="@+id/radiogrp_searchwiz_selector"
-        android:layout_width="wrap_content"
+    <ScrollView
+        android:id="@+id/scrollview_searchwiz_selector"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/button_searchwiz_previous"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_searchwiz_selectcomponent"
-        tools:layout_constraintBottom_toTopOf="@id/button_searchwiz_previous"
-        tools:layout_constraintEnd_toEndOf="parent"
-        tools:layout_constraintTop_toBottomOf="@id/textview_searchwiz_selectcomponent">
+        app:layout_constraintTop_toBottomOf="@id/textview_searchwiz_selectcomponent">
 
-        <RadioButton
-            android:id="@+id/radiobtn_component_case"
-            android:layout_width="match_parent"
+        <RadioGroup
+            android:id="@+id/radiogrp_searchwiz_selector"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:tag="CASE"
-            android:text="@string/label_case" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textview_searchwiz_selectcomponent"
+            tools:layout_constraintBottom_toTopOf="@id/button_searchwiz_previous"
+            tools:layout_constraintEnd_toEndOf="parent"
+            tools:layout_constraintTop_toBottomOf="@id/textview_searchwiz_selectcomponent">
 
-        <RadioButton
-            android:id="@+id/radiobtn_component_cpu"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:tag="CPU"
-            android:text="@string/label_cpu" />
+            <RadioButton
+                android:id="@+id/radiobtn_component_case"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="CASE"
+                android:text="@string/label_case" />
 
-        <RadioButton
-            android:id="@+id/radiobtn_component_gpu"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:tag="GPU"
-            android:text="@string/label_gpu" />
+            <RadioButton
+                android:id="@+id/radiobtn_component_cpu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="CPU"
+                android:text="@string/label_cpu" />
 
-        <RadioButton
-            android:id="@+id/radiobtn_component_memory"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:tag="MEMORY"
-            android:text="@string/label_memory" />
+            <RadioButton
+                android:id="@+id/radiobtn_component_gpu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="GPU"
+                android:text="@string/label_gpu" />
 
-        <RadioButton
-            android:id="@+id/radiobtn_component_mobo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:tag="MOTHERBOARD"
-            android:text="@string/label_motherboard" />
+            <RadioButton
+                android:id="@+id/radiobtn_component_memory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="MEMORY"
+                android:text="@string/label_memory" />
 
-        <RadioButton
-            android:id="@+id/radiobtn_component_psu"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:tag="POWERSUPPLY"
-            android:text="@string/label_psu" />
+            <RadioButton
+                android:id="@+id/radiobtn_component_mobo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="MOTHERBOARD"
+                android:text="@string/label_motherboard" />
 
-        <RadioButton
-            android:id="@+id/radiobtn_component_storage"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:tag="STORAGE"
-            android:text="@string/label_storage" />
-    </RadioGroup>
+            <RadioButton
+                android:id="@+id/radiobtn_component_psu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="POWERSUPPLY"
+                android:text="@string/label_psu" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_component_storage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="STORAGE"
+                android:text="@string/label_storage" />
+        </RadioGroup>
+    </ScrollView>
 
     <Button
         android:id="@+id/button_searchwiz_next"
@@ -91,7 +101,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.75"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/radiogrp_searchwiz_selector" />
+        app:layout_constraintTop_toBottomOf="@id/scrollview_searchwiz_selector" />
 
     <Button
         android:id="@+id/button_searchwiz_previous"
@@ -102,5 +112,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.25"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/radiogrp_searchwiz_selector" />
+        app:layout_constraintTop_toBottomOf="@id/scrollview_searchwiz_selector" />
 </androidx.constraintlayout.widget.ConstraintLayout>
