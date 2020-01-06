@@ -14,127 +14,153 @@
         android:text="Lorem Ipsum"
         android:textAlignment="center"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@id/radiogrp_searchwiz_selector"
+        app:layout_constraintBottom_toTopOf="@id/scrollview_searchwiz_selector"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <RadioGroup
-        android:id="@+id/radiogrp_searchwiz_selector"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ScrollView
+        android:id="@+id/scrollview_searchwiz_selector"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/button_searchwiz_previous"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_searchwiz_selectcomponent"
-        tools:layout_constraintBottom_toTopOf="@id/button_searchwiz_previous"
-        tools:layout_constraintEnd_toEndOf="parent"
-        tools:layout_constraintTop_toBottomOf="@id/textview_searchwiz_selectcomponent">
+        app:layout_constraintTop_toBottomOf="@id/textview_searchwiz_selectcomponent">
 
-        <RadioButton
-            android:id="@+id/radiobtn_cpu_intel_i3_4130"
-            android:layout_width="match_parent"
+        <RadioGroup
+            android:id="@+id/radiogrp_searchwiz_selector"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:tag="4130"
-            android:text="@string/label_cpu_intel_i3_4130" />
-        <RadioButton
-            android:id="@+id/radiobtn_cpu_intel_i3_4130t"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:tag="4130T"
-            android:text="@string/label_cpu_intel_i3_4130t" />
-        <RadioButton
-            android:id="@+id/radiobtn_cpu_intel_i3_4150"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:tag="4150"
-            android:text="@string/label_cpu_intel_i3_4150" />
-        <RadioButton
-            android:id="@+id/radiobtn_cpu_intel_i3_4150t"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:tag="4150T"
-            android:text="@string/label_cpu_intel_i3_4150t" />
-        <RadioButton
-            android:id="@+id/radiobtn_cpu_intel_i3_4160"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:tag="4160"
-            android:text="@string/label_cpu_intel_i3_4160" />
-        <RadioButton
-            android:id="@+id/radiobtn_cpu_intel_i3_4160t"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:tag="4160T"
-            android:text="@string/label_cpu_intel_i3_4160t" />
-        <RadioButton
-            android:id="@+id/radiobtn_cpu_intel_i3_4170"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:tag="4170"
-            android:text="@string/label_cpu_intel_i3_4170" />
-        <RadioButton
-            android:id="@+id/radiobtn_cpu_intel_i3_4170t"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:tag="4170T"
-            android:text="@string/label_cpu_intel_i3_4170t" />
-        <RadioButton
-            android:id="@+id/radiobtn_cpu_intel_i3_4330"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:tag="4330"
-            android:text="@string/label_cpu_intel_i3_4330" />
-        <RadioButton
-            android:id="@+id/radiobtn_cpu_intel_i3_4330t"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:tag="4330T"
-            android:text="@string/label_cpu_intel_i3_4330t" />
-        <RadioButton
-            android:id="@+id/radiobtn_cpu_intel_i3_4340"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:tag="4340"
-            android:text="@string/label_cpu_intel_i3_4340" />
-        <RadioButton
-            android:id="@+id/radiobtn_cpu_intel_i3_4350"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:tag="4350"
-            android:text="@string/label_cpu_intel_i3_4350" />
-        <RadioButton
-            android:id="@+id/radiobtn_cpu_intel_i3_4350t"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:tag="4350T"
-            android:text="@string/label_cpu_intel_i3_4350t" />
-        <RadioButton
-            android:id="@+id/radiobtn_cpu_intel_i3_4360"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:tag="4360"
-            android:text="@string/label_cpu_intel_i3_4360" />
-        <RadioButton
-            android:id="@+id/radiobtn_cpu_intel_i3_4360t"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:tag="4360T"
-            android:text="@string/label_cpu_intel_i3_4360t" />
-        <RadioButton
-            android:id="@+id/radiobtn_cpu_intel_i3_4370"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:tag="4370"
-            android:text="@string/label_cpu_intel_i3_4370" />
-        <RadioButton
-            android:id="@+id/radiobtn_cpu_intel_i3_4370t"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:tag="4370T"
-            android:text="@string/label_cpu_intel_i3_4370t" />
-    </RadioGroup>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textview_searchwiz_selectcomponent"
+            tools:layout_constraintBottom_toTopOf="@id/button_searchwiz_previous"
+            tools:layout_constraintEnd_toEndOf="parent"
+            tools:layout_constraintTop_toBottomOf="@id/textview_searchwiz_selectcomponent">
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i3_4130"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="4130"
+                android:text="@string/label_cpu_intel_i3_4130" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i3_4130t"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="4130T"
+                android:text="@string/label_cpu_intel_i3_4130t" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i3_4150"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="4150"
+                android:text="@string/label_cpu_intel_i3_4150" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i3_4150t"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="4150T"
+                android:text="@string/label_cpu_intel_i3_4150t" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i3_4160"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="4160"
+                android:text="@string/label_cpu_intel_i3_4160" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i3_4160t"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="4160T"
+                android:text="@string/label_cpu_intel_i3_4160t" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i3_4170"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="4170"
+                android:text="@string/label_cpu_intel_i3_4170" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i3_4170t"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="4170T"
+                android:text="@string/label_cpu_intel_i3_4170t" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i3_4330"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="4330"
+                android:text="@string/label_cpu_intel_i3_4330" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i3_4330t"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="4330T"
+                android:text="@string/label_cpu_intel_i3_4330t" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i3_4340"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="4340"
+                android:text="@string/label_cpu_intel_i3_4340" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i3_4350"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="4350"
+                android:text="@string/label_cpu_intel_i3_4350" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i3_4350t"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="4350T"
+                android:text="@string/label_cpu_intel_i3_4350t" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i3_4360"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="4360"
+                android:text="@string/label_cpu_intel_i3_4360" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i3_4360t"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="4360T"
+                android:text="@string/label_cpu_intel_i3_4360t" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i3_4370"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="4370"
+                android:text="@string/label_cpu_intel_i3_4370" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i3_4370t"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="4370T"
+                android:text="@string/label_cpu_intel_i3_4370t" />
+        </RadioGroup>
+    </ScrollView>
 
     <Button
         android:id="@+id/button_searchwiz_next"
@@ -145,7 +171,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.75"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/radiogrp_searchwiz_selector" />
+        app:layout_constraintTop_toBottomOf="@id/scrollview_searchwiz_selector" />
 
     <Button
         android:id="@+id/button_searchwiz_previous"
@@ -156,5 +182,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.25"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/radiogrp_searchwiz_selector" />
+        app:layout_constraintTop_toBottomOf="@id/scrollview_searchwiz_selector" />
 </androidx.constraintlayout.widget.ConstraintLayout>

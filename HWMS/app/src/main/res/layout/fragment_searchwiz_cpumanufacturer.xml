@@ -14,39 +14,49 @@
         android:text="Lorem Ipsum"
         android:textAlignment="center"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@id/radiogrp_searchwiz_selector"
+        app:layout_constraintBottom_toTopOf="@id/scrollview_searchwiz_selector"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <RadioGroup
-        android:id="@+id/radiogrp_searchwiz_selector"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ScrollView
+        android:id="@+id/scrollview_searchwiz_selector"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/button_searchwiz_previous"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_searchwiz_selectcomponent"
-        tools:layout_constraintBottom_toTopOf="@id/button_searchwiz_previous"
-        tools:layout_constraintEnd_toEndOf="parent"
-        tools:layout_constraintTop_toBottomOf="@id/textview_searchwiz_selectcomponent">
+        app:layout_constraintTop_toBottomOf="@id/textview_searchwiz_selectcomponent">
 
-        <RadioButton
-            android:id="@+id/radiobtn_component_cpu"
-            android:layout_width="match_parent"
+        <RadioGroup
+            android:id="@+id/radiogrp_searchwiz_selector"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:tag="AMD"
-            android:text="@string/label_cpu_amd" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textview_searchwiz_selectcomponent"
+            tools:layout_constraintBottom_toTopOf="@id/button_searchwiz_previous"
+            tools:layout_constraintEnd_toEndOf="parent"
+            tools:layout_constraintTop_toBottomOf="@id/textview_searchwiz_selectcomponent">
 
-        <RadioButton
-            android:id="@+id/radiobtn_component_case"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:tag="INTEL"
-            android:text="@string/label_cpu_intel" />
+            <RadioButton
+                android:id="@+id/radiobtn_component_cpu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="AMD"
+                android:text="@string/label_cpu_amd" />
 
-    </RadioGroup>
+            <RadioButton
+                android:id="@+id/radiobtn_component_case"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="INTEL"
+                android:text="@string/label_cpu_intel" />
+
+        </RadioGroup>
+    </ScrollView>
 
     <Button
         android:id="@+id/button_searchwiz_next"
@@ -57,7 +67,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.75"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/radiogrp_searchwiz_selector" />
+        app:layout_constraintTop_toBottomOf="@id/scrollview_searchwiz_selector" />
 
     <Button
         android:id="@+id/button_searchwiz_previous"
@@ -68,5 +78,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.25"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/radiogrp_searchwiz_selector" />
+        app:layout_constraintTop_toBottomOf="@id/scrollview_searchwiz_selector" />
 </androidx.constraintlayout.widget.ConstraintLayout>
