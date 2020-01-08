@@ -10,20 +10,23 @@ import android.widget.RadioGroup
 import android.widget.TextView
 
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.amazonaws.mobile.config.AWSConfiguration
+import com.amazonaws.mobileconnectors.appsync.AWSAppSyncClient
 import com.google.android.material.snackbar.Snackbar
+import androidx.appcompat.app.AppCompatActivity
+import com.k00221230.fyp.hwms.HWMSAppSyncActivity
 
 import com.k00221230.fyp.hwms.R
 import com.k00221230.fyp.hwms.ui.searchwizard.SearchWizViewModel
-import com.k00221230.fyp.hwms.ui.searchwizard.cpumanufacturer.intel.SearchWizCpuManuIntelFragmentDirections
 
 class SearchWizCpuIntelI34000Fragment : Fragment() {
 
     private val args: SearchWizCpuIntelI34000FragmentArgs by navArgs()
 
     private lateinit var SearchWizCpuIntelI34000ViewModel: SearchWizViewModel
+
+    private lateinit var mHWMSAppSyncActivity: HWMSAppSyncActivity
 
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
@@ -114,6 +117,9 @@ class SearchWizCpuIntelI34000Fragment : Fragment() {
                         .setAction("Action", null).show()
                 }
             }
+
+            mHWMSAppSyncActivity.runMutation()
+
             //findNavController().navigate(R.id.action_SearchWizCpuManuIntelFragment_to_SearchWizHomeFragment)
         }
     }

@@ -1,0 +1,15 @@
+{
+    "testenv": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-hwms-testenv-112433-authRole",
+            "UnauthRoleArn": "arn:aws:iam::227389701406:role/amplify-hwms-testenv-112433-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::227389701406:role/amplify-hwms-testenv-112433-authRole",
+            "Region": "eu-west-1",
+            "DeploymentBucketName": "amplify-hwms-testenv-112433-deployment",
+            "UnauthRoleName": "amplify-hwms-testenv-112433-unauthRole",
+            "StackName": "amplify-hwms-testenv-112433",
+            "StackId": "arn:aws:cloudformation:eu-west-1:227389701406:stack/amplify-hwms-testenv-112433/8306d920-3209-11ea-80bd-027d0216890a",
+            "AmplifyAppId": "d2w0jp21zpbj2z"
+        }
+    }
+}

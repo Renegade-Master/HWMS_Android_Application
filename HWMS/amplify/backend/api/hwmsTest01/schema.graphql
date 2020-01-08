@@ -1,0 +1,18 @@
+type SearchQueryRequest @model {
+  id: ID!
+  prediction: Boolean!
+  item: String!
+}
+
+type SearchQueryResponse @model {
+  id: ID!
+  retailers: [Retailer!]!
+}
+
+type Retailer {
+  id: ID!
+  name: String!
+  url: String!
+  price: Int!
+  country_of_origin: String
+}

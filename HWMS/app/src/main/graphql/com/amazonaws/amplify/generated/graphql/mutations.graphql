@@ -1,0 +1,76 @@
+# this is an auto generated file. This will be overwritten
+mutation CreateSearchQueryRequest(
+  $input: CreateSearchQueryRequestInput!
+  $condition: ModelSearchQueryRequestConditionInput
+) {
+  createSearchQueryRequest(input: $input, condition: $condition) {
+    id
+    prediction
+    item
+  }
+}
+mutation UpdateSearchQueryRequest(
+  $input: UpdateSearchQueryRequestInput!
+  $condition: ModelSearchQueryRequestConditionInput
+) {
+  updateSearchQueryRequest(input: $input, condition: $condition) {
+    id
+    prediction
+    item
+  }
+}
+mutation DeleteSearchQueryRequest(
+  $input: DeleteSearchQueryRequestInput!
+  $condition: ModelSearchQueryRequestConditionInput
+) {
+  deleteSearchQueryRequest(input: $input, condition: $condition) {
+    id
+    prediction
+    item
+  }
+}
+mutation CreateSearchQueryResponse(
+  $input: CreateSearchQueryResponseInput!
+  $condition: ModelSearchQueryResponseConditionInput
+) {
+  createSearchQueryResponse(input: $input, condition: $condition) {
+    id
+    retailers {
+      id
+      name
+      url
+      price
+      country_of_origin
+    }
+  }
+}
+mutation UpdateSearchQueryResponse(
+  $input: UpdateSearchQueryResponseInput!
+  $condition: ModelSearchQueryResponseConditionInput
+) {
+  updateSearchQueryResponse(input: $input, condition: $condition) {
+    id
+    retailers {
+      id
+      name
+      url
+      price
+      country_of_origin
+    }
+  }
+}
+mutation DeleteSearchQueryResponse(
+  $input: DeleteSearchQueryResponseInput!
+  $condition: ModelSearchQueryResponseConditionInput
+) {
+  deleteSearchQueryResponse(input: $input, condition: $condition) {
+    id
+    retailers {
+      id
+      name
+      url
+      price
+      country_of_origin
+    }
+  }
+}

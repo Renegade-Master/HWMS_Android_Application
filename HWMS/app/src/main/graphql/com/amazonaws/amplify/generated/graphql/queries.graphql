@@ -1,0 +1,61 @@
+# this is an auto generated file. This will be overwritten
+query GetSearchQueryRequest($id: ID!) {
+  getSearchQueryRequest(id: $id) {
+    id
+    prediction
+    item
+  }
+}
+query ListSearchQueryRequests(
+  $filter: ModelSearchQueryRequestFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listSearchQueryRequests(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      prediction
+      item
+    }
+    nextToken
+  }
+}
+query GetSearchQueryResponse($id: ID!) {
+  getSearchQueryResponse(id: $id) {
+    id
+    retailers {
+      id
+      name
+      url
+      price
+      country_of_origin
+    }
+  }
+}
+query ListSearchQueryResponses(
+  $filter: ModelSearchQueryResponseFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listSearchQueryResponses(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      retailers {
+        id
+        name
+        url
+        price
+        country_of_origin
+      }
+    }
+    nextToken
+  }
+}

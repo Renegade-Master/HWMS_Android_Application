@@ -1,0 +1,58 @@
+# this is an auto generated file. This will be overwritten
+subscription OnCreateSearchQueryRequest {
+  onCreateSearchQueryRequest {
+    id
+    prediction
+    item
+  }
+}
+subscription OnUpdateSearchQueryRequest {
+  onUpdateSearchQueryRequest {
+    id
+    prediction
+    item
+  }
+}
+subscription OnDeleteSearchQueryRequest {
+  onDeleteSearchQueryRequest {
+    id
+    prediction
+    item
+  }
+}
+subscription OnCreateSearchQueryResponse {
+  onCreateSearchQueryResponse {
+    id
+    retailers {
+      id
+      name
+      url
+      price
+      country_of_origin
+    }
+  }
+}
+subscription OnUpdateSearchQueryResponse {
+  onUpdateSearchQueryResponse {
+    id
+    retailers {
+      id
+      name
+      url
+      price
+      country_of_origin
+    }
+  }
+}
+subscription OnDeleteSearchQueryResponse {
+  onDeleteSearchQueryResponse {
+    id
+    retailers {
+      id
+      name
+      url
+      price
+      country_of_origin
+    }
+  }
+}
