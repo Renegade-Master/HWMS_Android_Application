@@ -1,7 +1,6 @@
 package com.k00221230.fyp.hwms
 
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -11,24 +10,13 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import com.amazonaws.amplify.generated.graphql.CreateSearchQueryRequestMutation
-import com.amazonaws.mobile.config.AWSConfiguration
-import com.amazonaws.mobileconnectors.appsync.AWSAppSyncClient
-import com.apollographql.apollo.GraphQLCall
-import com.apollographql.apollo.api.Response
-import com.apollographql.apollo.exception.ApolloException
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
-import type.CreateSearchQueryRequestInput
-
-
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
-
-    //private var mAWSAppSyncClient: AWSAppSyncClient? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -52,13 +40,6 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_home, R.id.nav_gallery), drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
-
-        // Initialise the AppSync Client
-//        mAWSAppSyncClient = AWSAppSyncClient.builder()
-//            .context(applicationContext)
-//            .awsConfiguration(AWSConfiguration(applicationContext))
-//            .build()
-        //mAWSAppSyncClient = AppSyncClientFactory.getInstance(applicationContext)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -71,40 +52,4 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
-
-    // HWMS API Handling
-
-    /*fun runMutation() {
-        if(mAWSAppSyncClient != null) {
-            println("Created AppSync Client")
-            println(mAWSAppSyncClient.toString())
-        } else {
-            println("AppSync Client is null for some reason")
-        }
-
-        val createSearchQueryRequestInput = CreateSearchQueryRequestInput.builder()
-            .id("000_test")
-            .prediction(false)
-            .item("testItem")
-            .build()
-
-        mAWSAppSyncClient?.mutate(
-            CreateSearchQueryRequestMutation.builder()
-                .input(createSearchQueryRequestInput).build())?.enqueue(mutationCallback)
-
-        println("Ran mutation")
-    }
-
-    private val mutationCallback = object: GraphQLCall.Callback<CreateSearchQueryRequestMutation.Data>() {
-        override fun onResponse(response: Response<CreateSearchQueryRequestMutation.Data>) {
-            Log.i("Results", "Added Todo")
-            println("Added entry")
-        }
-
-        override fun onFailure(e: ApolloException) {
-            Log.e("Error", e.toString())
-            println("Failed to add entry")
-        }
-    }*/
-
 }

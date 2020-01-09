@@ -1,8 +1,6 @@
 package com.k00221230.fyp.hwms
 
-import android.app.usage.UsageEvents
 import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
@@ -12,38 +10,34 @@ import com.apollographql.apollo.GraphQLCall
 import com.apollographql.apollo.api.Response
 import com.apollographql.apollo.exception.ApolloException
 import type.CreateSearchQueryRequestInput
+import java.util.Date
+import kotlin.random.Random
 
 object AppSyncClient: AppCompatActivity() {
     @Volatile
     private lateinit var client: AWSAppSyncClient
+
+    private val rand: Random = Random(Date().time)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
 
     @Synchronized
-    fun SendClientRequest(void: Float) {
-        AppSyncClientFactory
-    }
+    fun SendClientRequest(context: Context?, item: String, prediction: Boolean = false) {
+        println("Attempting to send:" +
+                "\nPrediction: " + prediction +
+                "\nItem: " + item)
 
-    @Synchronized
-    fun runMutation(context: Context?) {
         client = AppSyncClientFactory.getInstance(context!!)!!
 
-        if(client != null) {
-            println("Created AppSync Client")
-            println(client.toString())
-        } else {
-            println("AppSync Client is null for some reason")
-        }
-
         val createSearchQueryRequestInput = CreateSearchQueryRequestInput.builder()
-            .id("000_test")
-            .prediction(false)
-            .item("testItem")
+            .id(generateId())
+            .prediction(prediction)
+            .item(item)
             .build()
 
-        client?.mutate(
+        client.mutate(
             CreateSearchQueryRequestMutation.builder()
                 .input(createSearchQueryRequestInput).build())?.enqueue(mutationCallback)
 
@@ -60,42 +54,13 @@ object AppSyncClient: AppCompatActivity() {
             Log.e("Error", e.toString())
             println("Failed to add entry")
         }
+    }
+
+    private fun generateId(): String {
+        var id: Long = Date().time
+
+        id += rand.nextLong(1,85132547)
+
+        return id.toString()
     }
 }
-
-/*
-
-    fun runMutation() {
-        if(mAWSAppSyncClient != null) {
-            println("Created AppSync Client")
-            println(mAWSAppSyncClient.toString())
-        } else {
-            println("AppSync Client is null for some reason")
-        }
-
-        val createSearchQueryRequestInput = CreateSearchQueryRequestInput.builder()
-            .id("000_test")
-            .prediction(false)
-            .item("testItem")
-            .build()
-
-        mAWSAppSyncClient?.mutate(
-            CreateSearchQueryRequestMutation.builder()
-                .input(createSearchQueryRequestInput).build())?.enqueue(mutationCallback)
-
-        println("Ran mutation")
-    }
-
-    private val mutationCallback = object: GraphQLCall.Callback<CreateSearchQueryRequestMutation.Data>() {
-        override fun onResponse(response: Response<CreateSearchQueryRequestMutation.Data>) {
-            Log.i("Results", "Added Todo")
-            println("Added entry")
-        }
-
-        override fun onFailure(e: ApolloException) {
-            Log.e("Error", e.toString())
-            println("Failed to add entry")
-        }
-    }
-
- */

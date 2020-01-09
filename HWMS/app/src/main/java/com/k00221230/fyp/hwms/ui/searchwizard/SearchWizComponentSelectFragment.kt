@@ -13,7 +13,6 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.navArgs
 import com.google.android.material.snackbar.Snackbar
-import com.k00221230.fyp.hwms.AppSyncClient
 
 import com.k00221230.fyp.hwms.R
 
@@ -77,10 +76,6 @@ class SearchWizComponentSelectFragment : Fragment() {
                         .setAction("Action", null).show()
                 }
             }
-
-            AppSyncClient.runMutation(context)
-
-            //findNavController().navigate(R.id.action_SearchWizComponentSelectFragment_to_SearchWizHomeFragment)
         }
     }
 }

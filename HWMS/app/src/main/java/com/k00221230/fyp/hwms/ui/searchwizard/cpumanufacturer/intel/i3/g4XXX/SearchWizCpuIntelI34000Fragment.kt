@@ -11,11 +11,8 @@ import android.widget.TextView
 
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
-import com.amazonaws.mobileconnectors.appsync.AWSAppSyncClient
 import com.google.android.material.snackbar.Snackbar
 import com.k00221230.fyp.hwms.AppSyncClient
-import com.k00221230.fyp.hwms.AppSyncClientFactory
-import com.k00221230.fyp.hwms.MainActivity
 
 import com.k00221230.fyp.hwms.R
 import com.k00221230.fyp.hwms.ui.searchwizard.SearchWizViewModel
@@ -26,14 +23,10 @@ class SearchWizCpuIntelI34000Fragment : Fragment() {
 
     private lateinit var SearchWizCpuIntelI34000ViewModel: SearchWizViewModel
 
-    //private var appSyncClient: AWSAppSyncClient? = null
-
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        //appSyncClient = AppSyncClientFactory.getInstance(MainActivity().applicationContext)
-
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_searchwiz_cpu_intel_i3_4000, container, false)
     }
@@ -120,7 +113,15 @@ class SearchWizCpuIntelI34000Fragment : Fragment() {
                 }
             }
 
-            AppSyncClient.runMutation(context)
+            val sbTerm: StringBuilder = StringBuilder()
+            sbTerm
+                .append("CPU ")
+                .append("Intel ")
+                .append("i3 ")
+                .append(selection.tag)
+
+            val term: String = sbTerm.toString()
+            AppSyncClient.SendClientRequest(context, term)
 
             //findNavController().navigate(R.id.action_SearchWizCpuManuIntelFragment_to_SearchWizHomeFragment)
         }

@@ -10,14 +10,12 @@ import android.widget.RadioGroup
 import android.widget.TextView
 
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.google.android.material.snackbar.Snackbar
+import com.k00221230.fyp.hwms.AppSyncClient
 
 import com.k00221230.fyp.hwms.R
 import com.k00221230.fyp.hwms.ui.searchwizard.SearchWizViewModel
-import com.k00221230.fyp.hwms.ui.searchwizard.cpumanufacturer.intel.SearchWizCpuManuIntelFragmentDirections
 
 class SearchWizCpuIntelI75000Fragment : Fragment() {
 
@@ -58,6 +56,17 @@ class SearchWizCpuIntelI75000Fragment : Fragment() {
                         .setAction("Action", null).show()
                 }
             }
+
+            val sbTerm: StringBuilder = StringBuilder()
+            sbTerm
+                .append("CPU ")
+                .append("Intel ")
+                .append("i7 ")
+                .append(selection.tag)
+
+            val term: String = sbTerm.toString()
+            AppSyncClient.SendClientRequest(context, term)
+
             //findNavController().navigate(R.id.action_SearchWizCpuManuIntelFragment_to_SearchWizHomeFragment)
         }
     }
