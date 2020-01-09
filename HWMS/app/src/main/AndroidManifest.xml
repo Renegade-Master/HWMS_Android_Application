@@ -18,8 +18,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <!-- Required service for AWS AppSync -->
-        <service android:name="org.eclipse.paho.android.service.MqttService" />
+        <!-- Required service for AWS AppSync Subscriptions -->
+        <!-- <service android:name="org.eclipse.paho.android.service.MqttService" /> -->
 
         <activity
             android:name=".MainActivity"

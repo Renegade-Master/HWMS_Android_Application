@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
 
-    private var mAWSAppSyncClient: AWSAppSyncClient? = null
+    //private var mAWSAppSyncClient: AWSAppSyncClient? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -54,10 +54,11 @@ class MainActivity : AppCompatActivity() {
         navView.setupWithNavController(navController)
 
         // Initialise the AppSync Client
-        mAWSAppSyncClient = AWSAppSyncClient.builder()
-            .context(applicationContext)
-            .awsConfiguration(AWSConfiguration(applicationContext))
-            .build()
+//        mAWSAppSyncClient = AWSAppSyncClient.builder()
+//            .context(applicationContext)
+//            .awsConfiguration(AWSConfiguration(applicationContext))
+//            .build()
+        //mAWSAppSyncClient = AppSyncClientFactory.getInstance(applicationContext)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -73,7 +74,7 @@ class MainActivity : AppCompatActivity() {
 
     // HWMS API Handling
 
-    fun runMutation() {
+    /*fun runMutation() {
         if(mAWSAppSyncClient != null) {
             println("Created AppSync Client")
             println(mAWSAppSyncClient.toString())
@@ -104,6 +105,6 @@ class MainActivity : AppCompatActivity() {
             Log.e("Error", e.toString())
             println("Failed to add entry")
         }
-    }
+    }*/
 
 }

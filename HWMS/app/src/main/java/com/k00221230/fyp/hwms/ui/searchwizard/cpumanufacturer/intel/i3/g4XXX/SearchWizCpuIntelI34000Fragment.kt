@@ -11,7 +11,10 @@ import android.widget.TextView
 
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
+import com.amazonaws.mobileconnectors.appsync.AWSAppSyncClient
 import com.google.android.material.snackbar.Snackbar
+import com.k00221230.fyp.hwms.AppSyncClient
+import com.k00221230.fyp.hwms.AppSyncClientFactory
 import com.k00221230.fyp.hwms.MainActivity
 
 import com.k00221230.fyp.hwms.R
@@ -23,10 +26,14 @@ class SearchWizCpuIntelI34000Fragment : Fragment() {
 
     private lateinit var SearchWizCpuIntelI34000ViewModel: SearchWizViewModel
 
+    //private var appSyncClient: AWSAppSyncClient? = null
+
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
+        //appSyncClient = AppSyncClientFactory.getInstance(MainActivity().applicationContext)
+
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_searchwiz_cpu_intel_i3_4000, container, false)
     }
@@ -113,7 +120,7 @@ class SearchWizCpuIntelI34000Fragment : Fragment() {
                 }
             }
 
-            MainActivity().runMutation()
+            AppSyncClient.runMutation(context)
 
             //findNavController().navigate(R.id.action_SearchWizCpuManuIntelFragment_to_SearchWizHomeFragment)
         }
