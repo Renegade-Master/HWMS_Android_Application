@@ -34,7 +34,7 @@ class SearchWizCpuIntelI5Fragment : Fragment() {
             savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_searchwiz_componentselect, container, false)
+        return inflater.inflate(R.layout.fragment_searchwiz_cpu_intel_i5, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -52,33 +52,58 @@ class SearchWizCpuIntelI5Fragment : Fragment() {
                 "4000" -> {
                     Snackbar.make(view, "Selected 4XXX", Snackbar.LENGTH_SHORT)
                         .setAction("Action", null).show()
+
+                    val action = SearchWizCpuIntelI5FragmentDirections
+                        .actionSearchWizCpuIntelI5FragmentToSearchWizCpuIntelI54000Fragment("From search step CPU_INTEL_I5")
+                    NavHostFragment.findNavController(this@SearchWizCpuIntelI5Fragment)
+                        .navigate(action)
                 }
                 "5000" -> {
                     Snackbar.make(view, "Selected 5XXX", Snackbar.LENGTH_SHORT)
                         .setAction("Action", null).show()
+
+                    val action = SearchWizCpuIntelI5FragmentDirections
+                        .actionSearchWizCpuIntelI5FragmentToSearchWizCpuIntelI55000Fragment("From search step CPU_INTEL_I5")
+                    NavHostFragment.findNavController(this@SearchWizCpuIntelI5Fragment)
+                        .navigate(action)
                 }
                 "6000" -> {
                     Snackbar.make(view, "Selected 6XXX", Snackbar.LENGTH_SHORT)
                         .setAction("Action", null).show()
+
+                    val action = SearchWizCpuIntelI5FragmentDirections
+                        .actionSearchWizCpuIntelI5FragmentToSearchWizCpuIntelI56000Fragment("From search step CPU_INTEL_I5")
+                    NavHostFragment.findNavController(this@SearchWizCpuIntelI5Fragment)
+                        .navigate(action)
                 }
                 "7000" -> {
                     Snackbar.make(view, "Selected 7XXX", Snackbar.LENGTH_SHORT)
                         .setAction("Action", null).show()
+
+                    val action = SearchWizCpuIntelI5FragmentDirections
+                        .actionSearchWizCpuIntelI5FragmentToSearchWizCpuIntelI57000Fragment("From search step CPU_INTEL_I5")
+                    NavHostFragment.findNavController(this@SearchWizCpuIntelI5Fragment)
+                        .navigate(action)
                 }
                 "8000" -> {
                     Snackbar.make(view, "Selected 8XXX", Snackbar.LENGTH_SHORT)
                         .setAction("Action", null).show()
+
+                    val action = SearchWizCpuIntelI5FragmentDirections
+                        .actionSearchWizCpuIntelI5FragmentToSearchWizCpuIntelI58000Fragment("From search step CPU_INTEL_I5")
+                    NavHostFragment.findNavController(this@SearchWizCpuIntelI5Fragment)
+                        .navigate(action)
                 }
                 "9000" -> {
                     Snackbar.make(view, "Selected 9XXX", Snackbar.LENGTH_SHORT)
                         .setAction("Action", null).show()
-                }
-                "10000" -> {
-                    Snackbar.make(view, "Selected 10XXX", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show()
+
+                    val action = SearchWizCpuIntelI5FragmentDirections
+                        .actionSearchWizCpuIntelI5FragmentToSearchWizCpuIntelI59000Fragment("From search step CPU_INTEL_I5")
+                    NavHostFragment.findNavController(this@SearchWizCpuIntelI5Fragment)
+                        .navigate(action)
                 }
             }
-            findNavController().navigate(R.id.action_SearchWizCpuManuIntelFragment_to_SearchWizHomeFragment)
         }
     }
 }

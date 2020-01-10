@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.searchwizard.SearchWizHomeFragment">
+
+    <TextView
+        android:id="@+id/textview_searchwiz_selectcomponent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Lorem Ipsum"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/scrollview_searchwiz_selector"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollview_searchwiz_selector"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/button_searchwiz_previous"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview_searchwiz_selectcomponent">
+
+        <RadioGroup
+            android:id="@+id/radiogrp_searchwiz_selector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textview_searchwiz_selectcomponent"
+            tools:layout_constraintBottom_toTopOf="@id/button_searchwiz_previous"
+            tools:layout_constraintEnd_toEndOf="parent"
+            tools:layout_constraintTop_toBottomOf="@id/textview_searchwiz_selectcomponent">
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i5_4430"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="4430"
+                android:text="@string/label_cpu_intel_i5_4430" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i5_4430s"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="4430S"
+                android:text="@string/label_cpu_intel_i5_4430s" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i5_4440"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="4440"
+                android:text="@string/label_cpu_intel_i5_4440" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i5_4440s"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="4440S"
+                android:text="@string/label_cpu_intel_i5_4440s" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i5_4460"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="4460"
+                android:text="@string/label_cpu_intel_i5_4460" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i5_4460s"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="4460S"
+                android:text="@string/label_cpu_intel_i5_4460s" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i5_4460t"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="4460T"
+                android:text="@string/label_cpu_intel_i5_4460t" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i5_4570"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="4570"
+                android:text="@string/label_cpu_intel_i5_4570" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i5_4570r"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="4570R"
+                android:text="@string/label_cpu_intel_i5_4570r" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i5_4570s"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="4570S"
+                android:text="@string/label_cpu_intel_i5_4570s" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i5_4570t"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="4570T"
+                android:text="@string/label_cpu_intel_i5_4570t" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i5_4590"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="4590"
+                android:text="@string/label_cpu_intel_i5_4590" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i5_4590s"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="4590S"
+                android:text="@string/label_cpu_intel_i5_4590s" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i5_4590t"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="4590T"
+                android:text="@string/label_cpu_intel_i5_4590t" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i5_4670"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="4670"
+                android:text="@string/label_cpu_intel_i5_4670" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i5_4670k"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="4670K"
+                android:text="@string/label_cpu_intel_i5_4670k" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i5_4670r"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="4670R"
+                android:text="@string/label_cpu_intel_i5_4670r" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i5_4670s"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="4670S"
+                android:text="@string/label_cpu_intel_i5_4670s" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i5_4670T"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="4670T"
+                android:text="@string/label_cpu_intel_i5_4670t" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i5_4690"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="4690"
+                android:text="@string/label_cpu_intel_i5_4690" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i5_4690k"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="4690K"
+                android:text="@string/label_cpu_intel_i5_4690k" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i5_4690s"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="4690S"
+                android:text="@string/label_cpu_intel_i5_4690s" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i5_4690t"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="4690T"
+                android:text="@string/label_cpu_intel_i5_4690t" />
+        </RadioGroup>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/button_searchwiz_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scrollview_searchwiz_selector" />
+
+    <Button
+        android:id="@+id/button_searchwiz_previous"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/previous"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scrollview_searchwiz_selector" />
+</androidx.constraintlayout.widget.ConstraintLayout>

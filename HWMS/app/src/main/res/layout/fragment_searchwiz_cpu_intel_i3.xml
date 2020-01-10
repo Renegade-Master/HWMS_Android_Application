@@ -48,12 +48,6 @@
                 android:tag="4000"
                 android:text="@string/label_cpu_intel_4000" />
             <RadioButton
-                android:id="@+id/radiobtn_cpu_intel_g5000"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:tag="5000"
-                android:text="@string/label_cpu_intel_5000" />
-            <RadioButton
                 android:id="@+id/radiobtn_cpu_intel_g6000"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -77,12 +71,6 @@
                 android:layout_height="wrap_content"
                 android:tag="9000"
                 android:text="@string/label_cpu_intel_9000" />
-            <RadioButton
-                android:id="@+id/radiobtn_cpu_intel_g10000"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:tag="10000"
-                android:text="@string/label_cpu_intel_10000" />
 
         </RadioGroup>
     </ScrollView>

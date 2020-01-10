@@ -1,4 +1,4 @@
-package com.k00221230.fyp.hwms.ui.searchwizard.cpumanufacturer.intel.i7.g5XXX
+package com.k00221230.fyp.hwms.ui.searchwizard.cpumanufacturer.intel.i5.g5XXX
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -16,19 +16,20 @@ import com.k00221230.fyp.hwms.AppSyncClient
 
 import com.k00221230.fyp.hwms.R
 import com.k00221230.fyp.hwms.ui.searchwizard.SearchWizViewModel
+import com.k00221230.fyp.hwms.ui.searchwizard.cpumanufacturer.intel.i3.g4XXX.SearchWizCpuIntelI34000FragmentArgs
 
-class SearchWizCpuIntelI75000Fragment : Fragment() {
+class SearchWizCpuIntelI55000Fragment : Fragment() {
 
-    private val args: SearchWizCpuIntelI75000FragmentArgs by navArgs()
+    private val args: SearchWizCpuIntelI55000FragmentArgs by navArgs()
 
-    private lateinit var SearchWizCpuIntelI75000ViewModel: SearchWizViewModel
+    private lateinit var SearchWizCpuIntelI55000ViewModel: SearchWizViewModel
 
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_searchwiz_cpu_intel_i7_5000, container, false)
+        return inflater.inflate(R.layout.fragment_searchwiz_cpu_intel_i5_5000, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -43,29 +44,26 @@ class SearchWizCpuIntelI75000Fragment : Fragment() {
             val selection = radioGroup.findViewById<RadioButton>(selectionId)
 
             when(selection.tag) {
-                "5820K" -> {
-                    Snackbar.make(view, "Selected Intel Core i7 5820K", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show()
-                }
-                "5930K" -> {
-                    Snackbar.make(view, "Selected Intel Core i7 5930K", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show()
-                }
-                "5960X" -> {
-                    Snackbar.make(view, "Selected Intel Core i7 5960X", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show()
+                "4130" -> {
+                    /*Snackbar.make(view, "Selected Intel Core i3 4130", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show()*/
                 }
             }
+
+            Snackbar.make(view, "Selected Intel Core i5 " + selection.tag, Snackbar.LENGTH_SHORT)
+                .setAction("Action", null).show()
 
             val sbTerm: StringBuilder = StringBuilder()
             sbTerm
                 .append("CPU ")
                 .append("Intel ")
-                .append("i7 ")
+                .append("i5 ")
                 .append(selection.tag)
 
             val term: String = sbTerm.toString()
             AppSyncClient.SendClientRequest(context, term)
+
+            //findNavController().navigate(R.id.action_SearchWizCpuManuIntelFragment_to_SearchWizHomeFragment)
         }
     }
 }

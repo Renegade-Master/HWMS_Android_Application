@@ -42,42 +42,74 @@
             tools:layout_constraintTop_toBottomOf="@id/textview_searchwiz_selectcomponent">
 
             <RadioButton
-                android:id="@+id/radiobtn_cpu_intel_g4000"
+                android:id="@+id/radiobtn_cpu_intel_i5_9400"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:tag="4000"
-                android:text="@string/label_cpu_intel_4000" />
-            <RadioButton
-                android:id="@+id/radiobtn_cpu_intel_g5000"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:tag="5000"
-                android:text="@string/label_cpu_intel_5000" />
-            <RadioButton
-                android:id="@+id/radiobtn_cpu_intel_g6000"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:tag="6000"
-                android:text="@string/label_cpu_intel_6000" />
-            <RadioButton
-                android:id="@+id/radiobtn_cpu_intel_g7000"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:tag="7000"
-                android:text="@string/label_cpu_intel_7000" />
-            <RadioButton
-                android:id="@+id/radiobtn_cpu_intel_g8000"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:tag="8000"
-                android:text="@string/label_cpu_intel_8000" />
-            <RadioButton
-                android:id="@+id/radiobtn_cpu_intel_g9000"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:tag="9000"
-                android:text="@string/label_cpu_intel_9000" />
+                android:tag="9400"
+                android:text="@string/label_cpu_intel_i5_9400" />
 
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i5_9400f"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="9400F"
+                android:text="@string/label_cpu_intel_i5_9400f" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i5_9400t"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="9400T"
+                android:text="@string/label_cpu_intel_i5_9400t" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i5_9500"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="9500"
+                android:text="@string/label_cpu_intel_i5_9500" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i5_9500f"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="9500F"
+                android:text="@string/label_cpu_intel_i5_9500f" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i5_9500t"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="9500T"
+                android:text="@string/label_cpu_intel_i5_9500t" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i5_9600"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="9600"
+                android:text="@string/label_cpu_intel_i5_9600" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i5_9600k"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="9600K"
+                android:text="@string/label_cpu_intel_i5_9600k" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i5_9600kf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="9600KF"
+                android:text="@string/label_cpu_intel_i5_9600kf" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i5_9600t"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="9600t"
+                android:text="@string/label_cpu_intel_i5_9600t" />
         </RadioGroup>
     </ScrollView>
 

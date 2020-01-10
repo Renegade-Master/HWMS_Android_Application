@@ -62,8 +62,6 @@ class SearchWizCpuManufacturerFragment : Fragment() {
                         .navigate(action)
                 }
             }
-
-            //findNavController().navigate(R.id.action_SearchWizCpuManufacturerFragment_to_SearchWizHomeFragment)
         }
     }
 }

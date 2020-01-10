@@ -1,4 +1,4 @@
-package com.k00221230.fyp.hwms.ui.searchwizard.cpumanufacturer.intel.i9
+package com.k00221230.fyp.hwms.ui.searchwizard.cpumanufacturer.intel.i5.g6XXX
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,33 +10,32 @@ import android.widget.RadioGroup
 import android.widget.TextView
 
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.google.android.material.snackbar.Snackbar
+import com.k00221230.fyp.hwms.AppSyncClient
 
 import com.k00221230.fyp.hwms.R
 import com.k00221230.fyp.hwms.ui.searchwizard.SearchWizViewModel
 
-class SearchWizCpuIntelI9Fragment : Fragment() {
+class SearchWizCpuIntelI56000Fragment : Fragment() {
 
-    private val args: SearchWizCpuIntelI9FragmentArgs by navArgs()
+    private val args: SearchWizCpuIntelI56000FragmentArgs by navArgs()
 
-    private lateinit var SearchWizCpuIntelI9ViewModel: SearchWizViewModel
+    private lateinit var SearchWizCpuIntelI56000ViewModel: SearchWizViewModel
 
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_searchwiz_cpu_intel_i9, container, false)
+        return inflater.inflate(R.layout.fragment_searchwiz_cpu_intel_i5_6000, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         view.findViewById<TextView>(R.id.textview_searchwiz_selectcomponent).text =
-                getString(R.string.hello_searchwiz_cpu_intel_generation, args.myArg)
+                getString(R.string.hello_searchwiz_component, args.myArg)
 
         view.findViewById<Button>(R.id.button_searchwiz_next).setOnClickListener {
             val radioGroup = view.findViewById<RadioGroup>(R.id.radiogrp_searchwiz_selector)
@@ -44,16 +43,26 @@ class SearchWizCpuIntelI9Fragment : Fragment() {
             val selection = radioGroup.findViewById<RadioButton>(selectionId)
 
             when(selection.tag) {
-                "9000" -> {
-                    Snackbar.make(view, "Selected 9XXX", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show()
-
-                    val action = SearchWizCpuIntelI9FragmentDirections
-                        .actionSearchWizCpuIntelI9FragmentToSearchWizCpuIntelI99000Fragment("From search step CPU_INTEL_I9")
-                    NavHostFragment.findNavController(this@SearchWizCpuIntelI9Fragment)
-                        .navigate(action)
+                "4130" -> {
+                    /*Snackbar.make(view, "Selected Intel Core i3 4130", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show()*/
                 }
             }
+
+            Snackbar.make(view, "Selected Intel Core i5 " + selection.tag, Snackbar.LENGTH_SHORT)
+                .setAction("Action", null).show()
+
+            val sbTerm: StringBuilder = StringBuilder()
+            sbTerm
+                .append("CPU ")
+                .append("Intel ")
+                .append("i5 ")
+                .append(selection.tag)
+
+            val term: String = sbTerm.toString()
+            AppSyncClient.SendClientRequest(context, term)
+
+            //findNavController().navigate(R.id.action_SearchWizCpuManuIntelFragment_to_SearchWizHomeFragment)
         }
     }
 }

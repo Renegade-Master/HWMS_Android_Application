@@ -42,30 +42,81 @@
             tools:layout_constraintTop_toBottomOf="@id/textview_searchwiz_selectcomponent">
 
             <RadioButton
-                android:id="@+id/radiobtn_cpu_intel_i3"
+                android:id="@+id/radiobtn_cpu_intel_i9_9820x"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:tag="I3"
-                android:text="@string/label_cpu_intel_i3" />
-            <RadioButton
-                android:id="@+id/radiobtn_cpu_intel_i5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:tag="I5"
-                android:text="@string/label_cpu_intel_i5" />
-            <RadioButton
-                android:id="@+id/radiobtn_cpu_intel_i7"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:tag="I7"
-                android:text="@string/label_cpu_intel_i7" />
-            <RadioButton
-                android:id="@+id/radiobtn_cpu_intel_i9"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:tag="I9"
-                android:text="@string/label_cpu_intel_i9" />
+                android:tag="9820X"
+                android:text="@string/label_cpu_intel_i9_9820x" />
 
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i9_9900"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="9900"
+                android:text="@string/label_cpu_intel_i9_9900" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i9_9900k"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="9900K"
+                android:text="@string/label_cpu_intel_i9_9900k" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i9_9900kf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="9900KF"
+                android:text="@string/label_cpu_intel_i9_9900kf" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i9_9900ks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="9900KS"
+                android:text="@string/label_cpu_intel_i9_9900ks" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i9_9900t"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="9900T"
+                android:text="@string/label_cpu_intel_i9_9900t" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i9_9900x"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="9900X"
+                android:text="@string/label_cpu_intel_i9_9900x" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i9_9920x"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="9920X"
+                android:text="@string/label_cpu_intel_i9_9920x" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i9_9940x"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="9940X"
+                android:text="@string/label_cpu_intel_i9_9940x" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i9_9960x"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="9960X"
+                android:text="@string/label_cpu_intel_i9_9960x" />
+
+            <RadioButton
+                android:id="@+id/radiobtn_cpu_intel_i9_9980xe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="9980XE"
+                android:text="@string/label_cpu_intel_i9_9980xe" />
         </RadioGroup>
     </ScrollView>
 

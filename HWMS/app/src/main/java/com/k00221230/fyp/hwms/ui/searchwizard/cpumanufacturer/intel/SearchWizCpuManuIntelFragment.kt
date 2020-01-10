@@ -48,6 +48,7 @@ class SearchWizCpuManuIntelFragment : Fragment() {
                 "I3" -> {
                     Snackbar.make(view, "Selected i3", Snackbar.LENGTH_SHORT)
                         .setAction("Action", null).show()
+
                     val action = SearchWizCpuManuIntelFragmentDirections
                         .actionSearchWizCpuManuIntelFragmentToSearchWizCpuIntelI3Fragment("From search step CPU_INTEL")
                     NavHostFragment.findNavController(this@SearchWizCpuManuIntelFragment)
@@ -56,6 +57,7 @@ class SearchWizCpuManuIntelFragment : Fragment() {
                 "I5" -> {
                     Snackbar.make(view, "Selected i5", Snackbar.LENGTH_SHORT)
                         .setAction("Action", null).show()
+
                     val action = SearchWizCpuManuIntelFragmentDirections
                         .actionSearchWizCpuManuIntelFragmentToSearchWizCpuIntelI5Fragment("From search step CPU_INTEL")
                     NavHostFragment.findNavController(this@SearchWizCpuManuIntelFragment)
@@ -64,6 +66,7 @@ class SearchWizCpuManuIntelFragment : Fragment() {
                 "I7" -> {
                     Snackbar.make(view, "Selected i7", Snackbar.LENGTH_SHORT)
                         .setAction("Action", null).show()
+
                     val action = SearchWizCpuManuIntelFragmentDirections
                         .actionSearchWizCpuManuIntelFragmentToSearchWizCpuIntelI7Fragment("From search step CPU_INTEL")
                     NavHostFragment.findNavController(this@SearchWizCpuManuIntelFragment)
@@ -72,13 +75,13 @@ class SearchWizCpuManuIntelFragment : Fragment() {
                 "I9" -> {
                     Snackbar.make(view, "Selected i9", Snackbar.LENGTH_SHORT)
                         .setAction("Action", null).show()
+
                     val action = SearchWizCpuManuIntelFragmentDirections
                         .actionSearchWizCpuManuIntelFragmentToSearchWizCpuIntelI9Fragment("From search step CPU_INTEL")
                     NavHostFragment.findNavController(this@SearchWizCpuManuIntelFragment)
                         .navigate(action)
                 }
             }
-            //findNavController().navigate(R.id.action_SearchWizCpuManuIntelFragment_to_SearchWizHomeFragment)
         }
     }
 }

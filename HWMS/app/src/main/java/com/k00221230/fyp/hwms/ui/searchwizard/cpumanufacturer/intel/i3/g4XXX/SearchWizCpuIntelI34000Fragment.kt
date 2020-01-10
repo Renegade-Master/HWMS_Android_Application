@@ -44,74 +44,77 @@ class SearchWizCpuIntelI34000Fragment : Fragment() {
 
             when(selection.tag) {
                 "4130" -> {
-                    Snackbar.make(view, "Selected Intel Core i3 4130", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show()
+                    /*Snackbar.make(view, "Selected Intel Core i3 4130", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show()*/
                 }
                 "4130T" -> {
-                    Snackbar.make(view, "Selected Intel Core i3 4130T", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show()
+                    /*Snackbar.make(view, "Selected Intel Core i3 4130T", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show()*/
                 }
                 "4150" -> {
-                    Snackbar.make(view, "Selected Intel Core i3 4150", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show()
+                    /*Snackbar.make(view, "Selected Intel Core i3 4150", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show()*/
                 }
                 "4150T" -> {
-                    Snackbar.make(view, "Selected Intel Core i3 4150T", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show()
+                    /*Snackbar.make(view, "Selected Intel Core i3 4150T", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show()*/
                 }
                 "4160" -> {
-                    Snackbar.make(view, "Selected Intel Core i3 4160", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show()
+                    /*Snackbar.make(view, "Selected Intel Core i3 4160", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show()*/
                 }
                 "4160T" -> {
-                    Snackbar.make(view, "Selected Intel Core i3 4160T", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show()
+                    /*Snackbar.make(view, "Selected Intel Core i3 4160T", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show()*/
                 }
                 "4170" -> {
-                    Snackbar.make(view, "Selected Intel Core i3 4170", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show()
+                    /*Snackbar.make(view, "Selected Intel Core i3 4170", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show()*/
                 }
                 "4170T" -> {
-                    Snackbar.make(view, "Selected Intel Core i3 4170T", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show()
+                    /*Snackbar.make(view, "Selected Intel Core i3 4170T", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show()*/
                 }
                 "4330" -> {
-                    Snackbar.make(view, "Selected Intel Core i3 4330", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show()
+                    /*Snackbar.make(view, "Selected Intel Core i3 4330", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show()*/
                 }
                 "4330T" -> {
-                    Snackbar.make(view, "Selected Intel Core i3 4330T", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show()
+                    /*Snackbar.make(view, "Selected Intel Core i3 4330T", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show()*/
                 }
                 "4340" -> {
-                    Snackbar.make(view, "Selected Intel Core i3 4340", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show()
+                    /*Snackbar.make(view, "Selected Intel Core i3 4340", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show()*/
                 }
                 "4350" -> {
-                    Snackbar.make(view, "Selected Intel Core i3 4350", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show()
+                    /*Snackbar.make(view, "Selected Intel Core i3 4350", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show()*/
                 }
                 "4350T" -> {
-                    Snackbar.make(view, "Selected Intel Core i3 4350T", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show()
+                    /*Snackbar.make(view, "Selected Intel Core i3 4350T", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show()*/
                 }
                 "4360" -> {
-                    Snackbar.make(view, "Selected Intel Core i3 4360", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show()
+                    /*Snackbar.make(view, "Selected Intel Core i3 4360", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show()*/
                 }
                 "4360T" -> {
-                    Snackbar.make(view, "Selected Intel Core i3 4360T", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show()
+                    /*Snackbar.make(view, "Selected Intel Core i3 4360T", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show()*/
                 }
                 "4370" -> {
-                    Snackbar.make(view, "Selected Intel Core i3 4370", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show()
+                    /*Snackbar.make(view, "Selected Intel Core i3 4370", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show()*/
                 }
                 "4370T" -> {
-                    Snackbar.make(view, "Selected Intel Core i3 4370T", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show()
+                    /*Snackbar.make(view, "Selected Intel Core i3 4370T", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show()*/
                 }
             }
+
+            Snackbar.make(view, "Selected Intel Core i3 " + selection.tag, Snackbar.LENGTH_SHORT)
+                .setAction("Action", null).show()
 
             val sbTerm: StringBuilder = StringBuilder()
             sbTerm

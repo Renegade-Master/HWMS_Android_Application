@@ -1,7 +1,6 @@
 package com.k00221230.fyp.hwms
 
 import android.content.Context
-import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.amazonaws.amplify.generated.graphql.CreateSearchQueryRequestMutation
@@ -19,16 +18,13 @@ object AppSyncClient: AppCompatActivity() {
 
     private val rand: Random = Random(Date().time)
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
     @Synchronized
     fun SendClientRequest(context: Context?, item: String, prediction: Boolean = false) {
         println("Attempting to send:" +
                 "\nPrediction: " + prediction +
                 "\nItem: " + item)
 
+        // Comment the following line out to disable DB connection
         client = AppSyncClientFactory.getInstance(context!!)!!
 
         val createSearchQueryRequestInput = CreateSearchQueryRequestInput.builder()
@@ -46,7 +42,7 @@ object AppSyncClient: AppCompatActivity() {
 
     private val mutationCallback = object: GraphQLCall.Callback<CreateSearchQueryRequestMutation.Data>() {
         override fun onResponse(response: Response<CreateSearchQueryRequestMutation.Data>) {
-            Log.i("Results", "Added Todo")
+            Log.i("Success", "Added Entry")
             println("Added entry")
         }
 
