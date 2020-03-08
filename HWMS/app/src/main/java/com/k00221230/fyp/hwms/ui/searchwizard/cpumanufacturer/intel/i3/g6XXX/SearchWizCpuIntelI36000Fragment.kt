@@ -69,8 +69,8 @@ class SearchWizCpuIntelI36000Fragment : Fragment() {
                 }
             }
 
-            Snackbar.make(view, "Selected Intel Core i3 " + selection.tag, Snackbar.LENGTH_SHORT)
-                .setAction("Action", null).show()
+            /*Snackbar.make(view, "Selected Intel Core i3 " + selection.tag, Snackbar.LENGTH_SHORT)
+                .setAction("Action", null).show()*/
 
             val sbTerm: StringBuilder = StringBuilder()
             sbTerm

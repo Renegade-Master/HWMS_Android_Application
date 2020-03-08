@@ -44,16 +44,16 @@ class SearchWizCpuIntelI77000Fragment : Fragment() {
 
             when(selection.tag) {
                 "5820K" -> {
-                    Snackbar.make(view, "Selected Intel Core i7 5820K", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show()
+                    /*Snackbar.make(view, "Selected Intel Core i7 5820K", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show()*/
                 }
                 "5930K" -> {
-                    Snackbar.make(view, "Selected Intel Core i7 5930K", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show()
+                    /*Snackbar.make(view, "Selected Intel Core i7 5930K", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show()*/
                 }
                 "5960X" -> {
-                    Snackbar.make(view, "Selected Intel Core i7 5960X", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show()
+                    /*Snackbar.make(view, "Selected Intel Core i7 5960X", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show()*/
                 }
             }
 

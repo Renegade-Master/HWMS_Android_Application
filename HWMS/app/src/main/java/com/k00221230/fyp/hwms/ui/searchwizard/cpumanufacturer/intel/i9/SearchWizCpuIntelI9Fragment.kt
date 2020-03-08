@@ -45,8 +45,8 @@ class SearchWizCpuIntelI9Fragment : Fragment() {
 
             when(selection.tag) {
                 "9000" -> {
-                    Snackbar.make(view, "Selected 9XXX", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show()
+                    /*Snackbar.make(view, "Selected 9XXX", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show()*/
 
                     val action = SearchWizCpuIntelI9FragmentDirections
                         .actionSearchWizCpuIntelI9FragmentToSearchWizCpuIntelI99000Fragment("From search step CPU_INTEL_I9")

@@ -44,8 +44,8 @@ class SearchWizCpuIntelI3Fragment : Fragment() {
 
             when(selection.tag) {
                 "4000" -> {
-                    Snackbar.make(view, "Selected 4XXX", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show()
+                    /*Snackbar.make(view, "Selected 4XXX", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show()*/
 
                     val action = SearchWizCpuIntelI3FragmentDirections
                         .actionSearchWizCpuIntelI3FragmentToSearchWizCpuIntelI34000Fragment("From search step CPU_INTEL_I3")
@@ -53,8 +53,8 @@ class SearchWizCpuIntelI3Fragment : Fragment() {
                         .navigate(action)
                 }
                 "6000" -> {
-                    Snackbar.make(view, "Selected 6XXX", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show()
+                    /*Snackbar.make(view, "Selected 6XXX", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show()*/
 
                     val action = SearchWizCpuIntelI3FragmentDirections
                         .actionSearchWizCpuIntelI3FragmentToSearchWizCpuIntelI36000Fragment("From search step CPU_INTEL_I3")
@@ -62,8 +62,8 @@ class SearchWizCpuIntelI3Fragment : Fragment() {
                         .navigate(action)
                 }
                 "7000" -> {
-                    Snackbar.make(view, "Selected 7XXX", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show()
+                    /*Snackbar.make(view, "Selected 7XXX", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show()*/
 
                     val action = SearchWizCpuIntelI3FragmentDirections
                         .actionSearchWizCpuIntelI3FragmentToSearchWizCpuIntelI37000Fragment("From search step CPU_INTEL_I3")
@@ -71,8 +71,8 @@ class SearchWizCpuIntelI3Fragment : Fragment() {
                         .navigate(action)
                 }
                 "8000" -> {
-                    Snackbar.make(view, "Selected 8XXX", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show()
+                    /*Snackbar.make(view, "Selected 8XXX", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show()*/
 
                     val action = SearchWizCpuIntelI3FragmentDirections
                         .actionSearchWizCpuIntelI3FragmentToSearchWizCpuIntelI38000Fragment("From search step CPU_INTEL_I3")
@@ -80,8 +80,8 @@ class SearchWizCpuIntelI3Fragment : Fragment() {
                         .navigate(action)
                 }
                 "9000" -> {
-                    Snackbar.make(view, "Selected 9XXX", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show()
+                    /*Snackbar.make(view, "Selected 9XXX", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show()*/
 
                     val action = SearchWizCpuIntelI3FragmentDirections
                         .actionSearchWizCpuIntelI3FragmentToSearchWizCpuIntelI39000Fragment("From search step CPU_INTEL_I3")

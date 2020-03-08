@@ -46,16 +46,16 @@ class SearchWizCpuManufacturerFragment : Fragment() {
 
             when(selection.tag) {
                 "AMD" -> {
-                    Snackbar.make(view, "Selected AMD", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show()
+                    /*Snackbar.make(view, "Selected AMD", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show()*/
                     val action = SearchWizCpuManufacturerFragmentDirections
                         .actionSearchWizCpuManufacturerFragmentToSearchWizCpuManuAmdFragment("From search step CPU_MANUFACTURER")
                     NavHostFragment.findNavController(this@SearchWizCpuManufacturerFragment)
                         .navigate(action)
                 }
                 "INTEL" -> {
-                    Snackbar.make(view, "Selected Intel", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show()
+                    /*Snackbar.make(view, "Selected Intel", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show()*/
                     val action = SearchWizCpuManufacturerFragmentDirections
                         .actionSearchWizCpuManufacturerFragmentToSearchWizCpuManuIntelFragment("From search step CPU_MANUFACTURER")
                     NavHostFragment.findNavController(this@SearchWizCpuManufacturerFragment)

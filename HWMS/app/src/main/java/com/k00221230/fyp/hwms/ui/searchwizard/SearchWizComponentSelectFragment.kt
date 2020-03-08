@@ -43,12 +43,12 @@ class SearchWizComponentSelectFragment : Fragment() {
 
             when(selection.tag) {
                 "CASE" -> {
-                    Snackbar.make(view, "Selected Case", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show()
+                    /*Snackbar.make(view, "Selected Case", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show()*/
                 }
                 "CPU" -> {
-                    Snackbar.make(view, "Selected CPU", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show()
+                    /*Snackbar.make(view, "Selected CPU", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show()*/
                     val action = SearchWizComponentSelectFragmentDirections
                         .actionSearchWizComponentSelectFragmentToSearchWizCpuManufacturerFragment("From search step COMPONENT_SELECT")
                     NavHostFragment.findNavController(this@SearchWizComponentSelectFragment)
@@ -56,24 +56,24 @@ class SearchWizComponentSelectFragment : Fragment() {
 
                 }
                 "GPU" ->{
-                    Snackbar.make(view, "Selected GPU", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show()
+                    /*Snackbar.make(view, "Selected GPU", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show()*/
                 }
                 "MEMORY" ->{
-                    Snackbar.make(view, "Selected Memory/RAM", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show()
+                    /*Snackbar.make(view, "Selected Memory/RAM", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show()*/
                 }
                 "MOTHERBOARD" ->{
-                    Snackbar.make(view, "Selected Motherboard", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show()
+                    /*Snackbar.make(view, "Selected Motherboard", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show()*/
                 }
                 "POWERSUPPLY" ->{
-                    Snackbar.make(view, "Selected Power Supply", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show()
+                    /*Snackbar.make(view, "Selected Power Supply", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show()*/
                 }
                 "STORAGE" ->{
-                    Snackbar.make(view, "Selected Storage", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show()
+                    /*Snackbar.make(view, "Selected Storage", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show()*/
                 }
             }
         }

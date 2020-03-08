@@ -46,8 +46,8 @@ class SearchWizCpuManuIntelFragment : Fragment() {
 
             when(selection.tag) {
                 "I3" -> {
-                    Snackbar.make(view, "Selected i3", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show()
+                    /*Snackbar.make(view, "Selected i3", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show()*/
 
                     val action = SearchWizCpuManuIntelFragmentDirections
                         .actionSearchWizCpuManuIntelFragmentToSearchWizCpuIntelI3Fragment("From search step CPU_INTEL")
@@ -55,8 +55,8 @@ class SearchWizCpuManuIntelFragment : Fragment() {
                         .navigate(action)
                 }
                 "I5" -> {
-                    Snackbar.make(view, "Selected i5", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show()
+                    /*Snackbar.make(view, "Selected i5", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show()*/
 
                     val action = SearchWizCpuManuIntelFragmentDirections
                         .actionSearchWizCpuManuIntelFragmentToSearchWizCpuIntelI5Fragment("From search step CPU_INTEL")
@@ -64,8 +64,8 @@ class SearchWizCpuManuIntelFragment : Fragment() {
                         .navigate(action)
                 }
                 "I7" -> {
-                    Snackbar.make(view, "Selected i7", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show()
+                    /*Snackbar.make(view, "Selected i7", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show()*/
 
                     val action = SearchWizCpuManuIntelFragmentDirections
                         .actionSearchWizCpuManuIntelFragmentToSearchWizCpuIntelI7Fragment("From search step CPU_INTEL")
@@ -73,8 +73,8 @@ class SearchWizCpuManuIntelFragment : Fragment() {
                         .navigate(action)
                 }
                 "I9" -> {
-                    Snackbar.make(view, "Selected i9", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show()
+                    /*Snackbar.make(view, "Selected i9", Snackbar.LENGTH_SHORT)
+                        .setAction("Action", null).show()*/
 
                     val action = SearchWizCpuManuIntelFragmentDirections
                         .actionSearchWizCpuManuIntelFragmentToSearchWizCpuIntelI9Fragment("From search step CPU_INTEL")
