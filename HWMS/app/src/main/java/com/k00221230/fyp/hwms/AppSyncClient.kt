@@ -5,18 +5,26 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.amazonaws.amplify.generated.graphql.CreateSearchQueryRequestMutation
 import com.amazonaws.mobileconnectors.appsync.AWSAppSyncClient
-import com.apollographql.apollo.GraphQLCall
 import com.apollographql.apollo.api.Response
 import com.apollographql.apollo.exception.ApolloException
-import type.CreateSearchQueryRequestInput
+import com.apollographql.apollo.GraphQLCall
 import java.util.Date
 import kotlin.random.Random
+import type.CreateSearchQueryRequestInput
 
+/**
+ * The AppSyncClient Class.
+ *
+ * This Class is used to communicate with the AWS backend for HWMS.
+ */
 object AppSyncClient: AppCompatActivity() {
     @Volatile
     private lateinit var client: AWSAppSyncClient
 
     private val rand: Random = Random(Date().time)
+
+    // Use this to store the Request ID.  This is needed to check for results
+    private var id: String = String()
 
     @Synchronized
     fun SendClientRequest(context: Context?, item: String, prediction: Boolean = false) {
@@ -27,8 +35,9 @@ object AppSyncClient: AppCompatActivity() {
         // Comment the following line out to disable DB connection
         client = AppSyncClientFactory.getInstance(context!!)!!
 
+        id = generateId()
         val createSearchQueryRequestInput = CreateSearchQueryRequestInput.builder()
-            .id(generateId())
+            .id(id)
             .prediction(prediction)
             .item(item)
             .build()
@@ -52,9 +61,14 @@ object AppSyncClient: AppCompatActivity() {
         }
     }
 
+    /**
+     * Generate an ID that can be used to identify the request that this Client sends to the DB.
+     * This ID is then used to retrieve the results of the Current and Predicted price data.
+     */
     private fun generateId(): String {
         var id: Long = Date().time
 
+        // ToDo: Find a better way to generate a random ID
         id += rand.nextLong(1,85132547)
 
         return id.toString()
