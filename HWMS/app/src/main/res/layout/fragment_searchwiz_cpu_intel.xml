@@ -47,18 +47,21 @@
                 android:layout_height="wrap_content"
                 android:tag="I3"
                 android:text="@string/label_cpu_intel_i3" />
+
             <RadioButton
                 android:id="@+id/radiobtn_cpu_intel_i5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:tag="I5"
                 android:text="@string/label_cpu_intel_i5" />
+
             <RadioButton
                 android:id="@+id/radiobtn_cpu_intel_i7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:tag="I7"
                 android:text="@string/label_cpu_intel_i7" />
+
             <RadioButton
                 android:id="@+id/radiobtn_cpu_intel_i9"
                 android:layout_width="match_parent"

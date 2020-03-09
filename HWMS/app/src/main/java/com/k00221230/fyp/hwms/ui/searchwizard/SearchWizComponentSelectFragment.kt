@@ -8,12 +8,9 @@ import android.widget.Button
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.TextView
-
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.navArgs
-import com.google.android.material.snackbar.Snackbar
-
 import com.k00221230.fyp.hwms.R
 
 class SearchWizComponentSelectFragment : Fragment() {
@@ -23,8 +20,8 @@ class SearchWizComponentSelectFragment : Fragment() {
     private lateinit var searchWizComponentSelectViewModel: SearchWizViewModel
 
     override fun onCreateView(
-            inflater: LayoutInflater, container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_searchwiz_componentselect, container, false)
@@ -34,14 +31,14 @@ class SearchWizComponentSelectFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         view.findViewById<TextView>(R.id.textview_searchwiz_selectcomponent).text =
-                getString(R.string.hello_searchwiz_component, args.selectedComponent)
+            getString(R.string.hello_searchwiz_component, args.selectedComponent)
 
         view.findViewById<Button>(R.id.button_searchwiz_next).setOnClickListener {
             val radioGroup = view.findViewById<RadioGroup>(R.id.radiogrp_searchwiz_selector)
             val selectionId = radioGroup.checkedRadioButtonId
             val selection = radioGroup.findViewById<RadioButton>(selectionId)
 
-            when(selection.tag) {
+            when (selection.tag) {
                 "CASE" -> {
                     /*Snackbar.make(view, "Selected Case", Snackbar.LENGTH_SHORT)
                         .setAction("Action", null).show()*/
@@ -55,23 +52,23 @@ class SearchWizComponentSelectFragment : Fragment() {
                         .navigate(action)
 
                 }
-                "GPU" ->{
+                "GPU" -> {
                     /*Snackbar.make(view, "Selected GPU", Snackbar.LENGTH_SHORT)
                         .setAction("Action", null).show()*/
                 }
-                "MEMORY" ->{
+                "MEMORY" -> {
                     /*Snackbar.make(view, "Selected Memory/RAM", Snackbar.LENGTH_SHORT)
                         .setAction("Action", null).show()*/
                 }
-                "MOTHERBOARD" ->{
+                "MOTHERBOARD" -> {
                     /*Snackbar.make(view, "Selected Motherboard", Snackbar.LENGTH_SHORT)
                         .setAction("Action", null).show()*/
                 }
-                "POWERSUPPLY" ->{
+                "POWERSUPPLY" -> {
                     /*Snackbar.make(view, "Selected Power Supply", Snackbar.LENGTH_SHORT)
                         .setAction("Action", null).show()*/
                 }
-                "STORAGE" ->{
+                "STORAGE" -> {
                     /*Snackbar.make(view, "Selected Storage", Snackbar.LENGTH_SHORT)
                         .setAction("Action", null).show()*/
                 }

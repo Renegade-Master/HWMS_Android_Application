@@ -47,24 +47,28 @@
                 android:layout_height="wrap_content"
                 android:tag="5775C"
                 android:text="@string/label_cpu_intel_i7_5775c" />
+
             <RadioButton
                 android:id="@+id/radiobtn_cpu_intel_i7_5775r"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:tag="5775R"
                 android:text="@string/label_cpu_intel_i7_5775r" />
+
             <RadioButton
                 android:id="@+id/radiobtn_cpu_intel_i7_5820k"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:tag="5820K"
                 android:text="@string/label_cpu_intel_i7_5820k" />
+
             <RadioButton
                 android:id="@+id/radiobtn_cpu_intel_i7_5930k"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:tag="5930K"
                 android:text="@string/label_cpu_intel_i7_5930k" />
+
             <RadioButton
                 android:id="@+id/radiobtn_cpu_intel_i7_5960x"
                 android:layout_width="match_parent"

@@ -47,24 +47,28 @@
                 android:layout_height="wrap_content"
                 android:tag="4000"
                 android:text="@string/label_cpu_intel_4000" />
+
             <RadioButton
                 android:id="@+id/radiobtn_cpu_intel_g6000"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:tag="6000"
                 android:text="@string/label_cpu_intel_6000" />
+
             <RadioButton
                 android:id="@+id/radiobtn_cpu_intel_g7000"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:tag="7000"
                 android:text="@string/label_cpu_intel_7000" />
+
             <RadioButton
                 android:id="@+id/radiobtn_cpu_intel_g8000"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:tag="8000"
                 android:text="@string/label_cpu_intel_8000" />
+
             <RadioButton
                 android:id="@+id/radiobtn_cpu_intel_g9000"
                 android:layout_width="match_parent"

@@ -8,12 +8,9 @@ import android.widget.Button
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.TextView
-
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.navArgs
-import com.k00221230.fyp.hwms.AppSyncClient
-
 import com.k00221230.fyp.hwms.R
 import com.k00221230.fyp.hwms.ui.searchwizard.SearchWizViewModel
 
@@ -24,8 +21,8 @@ class SearchWizCpuIntelI37000Fragment : Fragment() {
     private lateinit var SearchWizCpuIntelI37000ViewModel: SearchWizViewModel
 
     override fun onCreateView(
-            inflater: LayoutInflater, container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_searchwiz_cpu_intel_i3_7000, container, false)
@@ -35,14 +32,14 @@ class SearchWizCpuIntelI37000Fragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         view.findViewById<TextView>(R.id.textview_searchwiz_selectcomponent).text =
-                getString(R.string.hello_searchwiz_component, args.myArg)
+            getString(R.string.hello_searchwiz_component, args.myArg)
 
         view.findViewById<Button>(R.id.button_searchwiz_next).setOnClickListener {
             val radioGroup = view.findViewById<RadioGroup>(R.id.radiogrp_searchwiz_selector)
             val selectionId = radioGroup.checkedRadioButtonId
             val selection = radioGroup.findViewById<RadioButton>(selectionId)
 
-            when(selection.tag) {
+            when (selection.tag) {
                 "7100" -> {
                     /*Snackbar.make(view, "Selected Intel Core i3 7100", Snackbar.LENGTH_SHORT)
                         .setAction("Action", null).show()*/

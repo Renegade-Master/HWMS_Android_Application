@@ -5,19 +5,19 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.amazonaws.amplify.generated.graphql.CreateSearchQueryRequestMutation
 import com.amazonaws.mobileconnectors.appsync.AWSAppSyncClient
+import com.apollographql.apollo.GraphQLCall
 import com.apollographql.apollo.api.Response
 import com.apollographql.apollo.exception.ApolloException
-import com.apollographql.apollo.GraphQLCall
+import type.CreateSearchQueryRequestInput
 import java.util.Date
 import kotlin.random.Random
-import type.CreateSearchQueryRequestInput
 
 /**
  * The AppSyncClient Class.
  *
  * This Class is used to communicate with the AWS backend for HWMS.
  */
-object AppSyncClient: AppCompatActivity() {
+object AppSyncClient : AppCompatActivity() {
     @Volatile
     private lateinit var client: AWSAppSyncClient
 
@@ -28,9 +28,11 @@ object AppSyncClient: AppCompatActivity() {
 
     @Synchronized
     fun sendClientRequest(context: Context?, item: String, prediction: Boolean = false) {
-        println("Attempting to send:" +
-                "\nPrediction: " + prediction +
-                "\nItem: " + item)
+        println(
+            "Attempting to send:" +
+                    "\nPrediction: " + prediction +
+                    "\nItem: " + item
+        )
 
         // Comment the following line out to disable DB connection
         client = AppSyncClientFactory.getInstance(context!!)!!
@@ -44,22 +46,24 @@ object AppSyncClient: AppCompatActivity() {
 
         client.mutate(
             CreateSearchQueryRequestMutation.builder()
-                .input(createSearchQueryRequestInput).build())?.enqueue(mutationCallback)
+                .input(createSearchQueryRequestInput).build()
+        )?.enqueue(mutationCallback)
 
         println("Ran mutation")
     }
 
-    private val mutationCallback = object: GraphQLCall.Callback<CreateSearchQueryRequestMutation.Data>() {
-        override fun onResponse(response: Response<CreateSearchQueryRequestMutation.Data>) {
-            Log.i("Success", "Added Entry")
-            println("Added entry")
-        }
+    private val mutationCallback =
+        object : GraphQLCall.Callback<CreateSearchQueryRequestMutation.Data>() {
+            override fun onResponse(response: Response<CreateSearchQueryRequestMutation.Data>) {
+                Log.i("Success", "Added Entry")
+                println("Added entry")
+            }
 
-        override fun onFailure(e: ApolloException) {
-            Log.e("Error", e.toString())
-            println("Failed to add entry")
+            override fun onFailure(e: ApolloException) {
+                Log.e("Error", e.toString())
+                println("Failed to add entry")
+            }
         }
-    }
 
     /**
      * Generate an ID that can be used to identify the request that this Client sends to the DB.
@@ -69,7 +73,7 @@ object AppSyncClient: AppCompatActivity() {
         var id: Long = Date().time
 
         // ToDo: Find a better way to generate a random ID
-        id += rand.nextLong(1,85132547)
+        id += rand.nextLong(1, 85132547)
 
         return id.toString()
     }

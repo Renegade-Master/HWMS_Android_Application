@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
     app:startDestination="@+id/nav_home">
-<!--
-    /*********************\
-    |   MAIN NAVIGATION   |
-    \*********************/
--->
+    <!--
+        /*********************\
+        |   MAIN NAVIGATION   |
+        \*********************/
+    -->
     <fragment
         android:id="@+id/nav_home"
         android:name="com.k00221230.fyp.hwms.ui.home.HomeFragment"
@@ -39,11 +39,11 @@
             android:name="searchTerm"
             app:argType="string" />
     </fragment>
-<!--
-    /*******************\
-    |   SEARCH WIZARD   |
-    \*******************/
--->
+    <!--
+        /*******************\
+        |   SEARCH WIZARD   |
+        \*******************/
+    -->
     <!-- Home -->
     <fragment
         android:id="@+id/nav_searchwiz_home"

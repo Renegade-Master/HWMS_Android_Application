@@ -15,12 +15,12 @@ class SearchHistoryFragment : Fragment() {
     private lateinit var searchHistoryViewModel: SearchHistoryViewModel
 
     override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
         searchHistoryViewModel =
-                ViewModelProviders.of(this).get(SearchHistoryViewModel::class.java)
+            ViewModelProviders.of(this).get(SearchHistoryViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_searchhistory, container, false)
         val textView: TextView = root.findViewById(R.id.text_gallery)
         searchHistoryViewModel.text.observe(viewLifecycleOwner, Observer {

@@ -20,8 +20,8 @@ class SearchWizHomeFragment : Fragment() {
     private lateinit var searchWizHomeViewModel: SearchWizViewModel
 
     override fun onCreateView(
-            inflater: LayoutInflater, container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_searchwiz_home, container, false)
@@ -31,7 +31,7 @@ class SearchWizHomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         view.findViewById<TextView>(R.id.textview_searchwiz_selectcomponent).text =
-                getString(R.string.hello_searchwiz_home, args.myArg)
+            getString(R.string.hello_searchwiz_home, args.myArg)
 
         view.findViewById<Button>(R.id.button_searchwiz_next).setOnClickListener {
             val action = SearchWizHomeFragmentDirections
