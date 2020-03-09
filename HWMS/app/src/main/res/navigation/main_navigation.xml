@@ -25,6 +25,20 @@
         android:name="com.k00221230.fyp.hwms.ui.searchhistory.SearchHistoryFragment"
         android:label="@string/menu_searchhistory"
         tools:layout="@layout/fragment_searchhistory" />
+
+    <fragment
+        android:id="@+id/nav_searchwiz_results"
+        android:name="com.k00221230.fyp.hwms.ui.searchwizard.SearchWizResultsFragment"
+        android:label="@string/menu_searchwiz_results"
+        tools:layout="@layout/fragment_searchwiz_results">
+        <action
+            android:id="@+id/action_SearchWizResultsFragment_to_HomeFragment"
+            app:destination="@id/nav_home" />
+
+        <argument
+            android:name="searchTerm"
+            app:argType="string" />
+    </fragment>
 <!--
     /*******************\
     |   SEARCH WIZARD   |
@@ -244,6 +258,9 @@
         <action
             android:id="@+id/action_SearchWizCpuIntelI34000Fragment_to_SearchWizHomeFragment"
             app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_SearchWizCpuIntelI34000Fragment_to_SearchWizResultsFragment"
+            app:destination="@id/nav_searchwiz_results" />
 
         <argument
             android:name="myArg"
@@ -257,6 +274,9 @@
         <action
             android:id="@+id/action_SearchWizCpuIntelI36000Fragment_to_SearchWizHomeFragment"
             app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_SearchWizCpuIntelI36000Fragment_to_SearchWizResultsFragment"
+            app:destination="@id/nav_searchwiz_results" />
 
         <argument
             android:name="myArg"
@@ -270,6 +290,9 @@
         <action
             android:id="@+id/action_SearchWizCpuIntelI37000Fragment_to_SearchWizHomeFragment"
             app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_SearchWizCpuIntelI37000Fragment_to_SearchWizResultsFragment"
+            app:destination="@id/nav_searchwiz_results" />
 
         <argument
             android:name="myArg"
@@ -283,6 +306,9 @@
         <action
             android:id="@+id/action_SearchWizCpuIntelI38000Fragment_to_SearchWizHomeFragment"
             app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_SearchWizCpuIntelI38000Fragment_to_SearchWizResultsFragment"
+            app:destination="@id/nav_searchwiz_results" />
 
         <argument
             android:name="myArg"
@@ -296,6 +322,9 @@
         <action
             android:id="@+id/action_SearchWizCpuIntelI39000Fragment_to_SearchWizHomeFragment"
             app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_SearchWizCpuIntelI39000Fragment_to_SearchWizResultsFragment"
+            app:destination="@id/nav_searchwiz_results" />
 
         <argument
             android:name="myArg"
@@ -311,6 +340,9 @@
         <action
             android:id="@+id/action_SearchWizCpuIntelI54000Fragment_to_SearchWizHomeFragment"
             app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_SearchWizCpuIntelI54000Fragment_to_SearchWizResultsFragment"
+            app:destination="@id/nav_searchwiz_results" />
 
         <argument
             android:name="myArg"
@@ -324,6 +356,9 @@
         <action
             android:id="@+id/action_SearchWizCpuIntelI55000Fragment_to_SearchWizHomeFragment"
             app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_SearchWizCpuIntelI55000Fragment_to_SearchWizResultsFragment"
+            app:destination="@id/nav_searchwiz_results" />
 
         <argument
             android:name="myArg"
@@ -337,6 +372,9 @@
         <action
             android:id="@+id/action_SearchWizCpuIntelI56000Fragment_to_SearchWizHomeFragment"
             app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_SearchWizCpuIntelI56000Fragment_to_SearchWizResultsFragment"
+            app:destination="@id/nav_searchwiz_results" />
 
         <argument
             android:name="myArg"
@@ -350,6 +388,9 @@
         <action
             android:id="@+id/action_SearchWizCpuIntelI57000Fragment_to_SearchWizHomeFragment"
             app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_SearchWizCpuIntelI57000Fragment_to_SearchWizResultsFragment"
+            app:destination="@id/nav_searchwiz_results" />
 
         <argument
             android:name="myArg"
@@ -363,6 +404,9 @@
         <action
             android:id="@+id/action_SearchWizCpuIntelI58000Fragment_to_SearchWizHomeFragment"
             app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_SearchWizCpuIntelI58000Fragment_to_SearchWizResultsFragment"
+            app:destination="@id/nav_searchwiz_results" />
 
         <argument
             android:name="myArg"
@@ -376,6 +420,9 @@
         <action
             android:id="@+id/action_SearchWizCpuIntelI59000Fragment_to_SearchWizHomeFragment"
             app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_SearchWizCpuIntelI59000Fragment_to_SearchWizResultsFragment"
+            app:destination="@id/nav_searchwiz_results" />
 
         <argument
             android:name="myArg"
@@ -392,6 +439,9 @@
         <action
             android:id="@+id/action_SearchWizCpuIntelI74000Fragment_to_SearchWizHomeFragment"
             app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_SearchWizCpuIntelI74000Fragment_to_SearchWizResultsFragment"
+            app:destination="@id/nav_searchwiz_results" />
 
         <argument
             android:name="myArg"
@@ -405,6 +455,9 @@
         <action
             android:id="@+id/action_SearchWizCpuIntelI75000Fragment_to_SearchWizHomeFragment"
             app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_SearchWizCpuIntelI75000Fragment_to_SearchWizResultsFragment"
+            app:destination="@id/nav_searchwiz_results" />
 
         <argument
             android:name="myArg"
@@ -418,6 +471,9 @@
         <action
             android:id="@+id/action_SearchWizCpuIntelI76000Fragment_to_SearchWizHomeFragment"
             app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_SearchWizCpuIntelI76000Fragment_to_SearchWizResultsFragment"
+            app:destination="@id/nav_searchwiz_results" />
 
         <argument
             android:name="myArg"
@@ -431,6 +487,9 @@
         <action
             android:id="@+id/action_SearchWizCpuIntelI77000Fragment_to_SearchWizHomeFragment"
             app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_SearchWizCpuIntelI77000Fragment_to_SearchWizResultsFragment"
+            app:destination="@id/nav_searchwiz_results" />
 
         <argument
             android:name="myArg"
@@ -444,6 +503,9 @@
         <action
             android:id="@+id/action_SearchWizCpuIntelI78000Fragment_to_SearchWizHomeFragment"
             app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_SearchWizCpuIntelI78000Fragment_to_SearchWizResultsFragment"
+            app:destination="@id/nav_searchwiz_results" />
 
         <argument
             android:name="myArg"
@@ -457,6 +519,9 @@
         <action
             android:id="@+id/action_SearchWizCpuIntelI79000Fragment_to_SearchWizHomeFragment"
             app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_SearchWizCpuIntelI79000Fragment_to_SearchWizResultsFragment"
+            app:destination="@id/nav_searchwiz_results" />
 
         <argument
             android:name="myArg"
@@ -472,6 +537,9 @@
         <action
             android:id="@+id/action_SearchWizCpuIntelI99000Fragment_to_SearchWizHomeFragment"
             app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_SearchWizCpuIntelI99000Fragment_to_SearchWizResultsFragment"
+            app:destination="@id/nav_searchwiz_results" />
 
         <argument
             android:name="myArg"

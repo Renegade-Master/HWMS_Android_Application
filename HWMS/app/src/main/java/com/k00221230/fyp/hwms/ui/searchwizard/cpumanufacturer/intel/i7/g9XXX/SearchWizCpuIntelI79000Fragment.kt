@@ -10,8 +10,8 @@ import android.widget.RadioGroup
 import android.widget.TextView
 
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.navArgs
-import com.google.android.material.snackbar.Snackbar
 import com.k00221230.fyp.hwms.AppSyncClient
 
 import com.k00221230.fyp.hwms.R
@@ -65,7 +65,12 @@ class SearchWizCpuIntelI79000Fragment : Fragment() {
                 .append(selection.tag)
 
             val term: String = sbTerm.toString()
-            AppSyncClient.SendClientRequest(context, term)
+            // AppSyncClient.sendClientRequest(context, term)
+
+            val action = SearchWizCpuIntelI79000FragmentDirections
+                .actionSearchWizCpuIntelI79000FragmentToSearchWizResultsFragment(term)
+            NavHostFragment.findNavController(this@SearchWizCpuIntelI79000Fragment)
+                .navigate(action)
         }
     }
 }

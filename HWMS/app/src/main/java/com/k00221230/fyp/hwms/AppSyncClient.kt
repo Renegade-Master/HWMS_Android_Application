@@ -27,7 +27,7 @@ object AppSyncClient: AppCompatActivity() {
     private var id: String = String()
 
     @Synchronized
-    fun SendClientRequest(context: Context?, item: String, prediction: Boolean = false) {
+    fun sendClientRequest(context: Context?, item: String, prediction: Boolean = false) {
         println("Attempting to send:" +
                 "\nPrediction: " + prediction +
                 "\nItem: " + item)
