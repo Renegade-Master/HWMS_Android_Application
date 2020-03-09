@@ -9,7 +9,11 @@
 
     <string name="menu_home">Hardware Mega Search</string>
     <string name="menu_searchhistory">History</string>
+
     <string name="menu_searchwiz_results">Search Results</string>
+    <string name="menu_searchwiz_results_table_heading_name">Item Name</string>
+    <string name="menu_searchwiz_results_table_heading_price">Item Price</string>
+    <string name="menu_searchwiz_results_table_heading_link">Link to Item</string>
 
     <string name="searchwiz_home">Search Wizard</string>
     <string name="start">Start</string>

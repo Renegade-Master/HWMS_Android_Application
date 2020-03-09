@@ -5,7 +5,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TableLayout
+import android.widget.TableRow
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
@@ -16,7 +18,7 @@ class SearchWizResultsFragment : Fragment() {
 
     private val searchTermArgs: SearchWizResultsFragmentArgs by navArgs()
 
-    private lateinit var searchWizResultsViewModel: SearchWizViewModel
+    private lateinit var SearchWizResultsViewModel: SearchWizViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,12 +29,13 @@ class SearchWizResultsFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
         // Send a request to the Database
         val searchTerm: String = searchTermArgs.searchTerm
-        AppSyncClient.sendClientRequest(context, searchTerm)
 
-        super.onViewCreated(view, savedInstanceState)
+        // Comment this line to disable DB Connection safely
+        AppSyncClient.sendClientRequest(context, searchTerm)
 
         view.findViewById<TextView>(R.id.textview_searchwiz_results).text =
             getString(R.string.menu_searchwiz_results)
@@ -43,7 +46,36 @@ class SearchWizResultsFragment : Fragment() {
         // ToDo: Wait for a reply to come back
 
         // ToDo: Populate the table with the results
-        //val nextItem: TableRow = TableRow
+        var nextItem: TableRow
+        var itemName: TextView
+        var itemPrice: TextView
+        var itemLink: Button
+        val dataRowLayout : TableRow.LayoutParams = TableRow.LayoutParams()
+
+        dataRowLayout.weight = 1.0f
+
+        for (i in 1..20) {
+            nextItem = TableRow(context)
+            nextItem.weightSum = 3.0f
+
+            itemName = TextView(context)
+            itemPrice = TextView(context)
+            itemLink = Button(context)
+
+            itemName.layoutParams = dataRowLayout
+            itemPrice.layoutParams = dataRowLayout
+            itemLink.layoutParams = dataRowLayout
+
+            itemName.text = "New Item $i"
+            itemPrice.text = "€123.45"
+            itemLink.text = "GoToItem"
+
+            nextItem.addView(itemName)
+            nextItem.addView(itemPrice)
+            nextItem.addView(itemLink)
+
+            tableLayout.addView(nextItem)
+        }
 
         // ToDo: Navigate to the purchase page if the user presses the LinkButton
     }

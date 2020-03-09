@@ -23,9 +23,20 @@
             android:text="@string/menu_searchwiz_results"
             android:textAlignment="center"
             android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@id/scrollview_searchwiz_selector"
+            app:layout_constraintBottom_toTopOf="@id/searchwiz_awaitingResults_spinner"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/searchwiz_awaitingResults_spinner"
+            style="?android:attr/spinnerStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="false"
+            app:layout_constraintBottom_toTopOf="@id/searchwiz_results_scrollview"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -50,7 +61,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Item Name"
+                        android:text="@string/menu_searchwiz_results_table_heading_name"
                         android:textAlignment="center"
                         android:textAllCaps="true"
                         android:textStyle="bold" />
@@ -60,7 +71,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Item Price"
+                        android:text="@string/menu_searchwiz_results_table_heading_price"
                         android:textAlignment="center"
                         android:textAllCaps="true"
                         android:textStyle="bold"
@@ -71,7 +82,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Link to Item"
+                        android:text="@string/menu_searchwiz_results_table_heading_link"
                         android:textAlignment="center"
                         android:textAllCaps="true"
                         android:textStyle="bold"
@@ -82,7 +93,8 @@
                 <TableRow
                     android:id="@+id/searchwiz_results_tablelayout_datarow"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent">
+                </TableRow>
 
             </TableLayout>
         </ScrollView>
