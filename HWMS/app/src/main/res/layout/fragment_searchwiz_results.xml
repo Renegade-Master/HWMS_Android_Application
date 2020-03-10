@@ -34,6 +34,7 @@
             style="?android:attr/spinnerStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@null"
             android:indeterminate="false"
             app:layout_constraintBottom_toTopOf="@id/searchwiz_results_scrollview"
             app:layout_constraintEnd_toEndOf="parent"
