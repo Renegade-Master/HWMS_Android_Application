@@ -1,0 +1,32 @@
+type SearchQueryRequest @model {
+  id: ID!
+  prediction: Boolean!
+  item: String!
+}
+
+type SearchQueryResponse @model {
+  id: ID!
+}
+
+type SearchQueryResponse2 @model {
+  id: ID!
+  result: [Results]!
+}
+
+type Results {
+  itemNames: [ItemNames!]!
+  itemPrices: [ItemPrices!]!
+  itemLinks: [ItemLinks!]!
+}
+
+type ItemNames {
+  itemName: String!
+}
+
+type ItemPrices {
+  itemPrice: Float!
+}
+
+type ItemLinks {
+  itemLink: AWSURL!
+}

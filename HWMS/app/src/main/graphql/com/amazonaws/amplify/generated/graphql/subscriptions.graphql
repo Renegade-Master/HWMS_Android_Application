@@ -23,36 +23,63 @@ subscription OnDeleteSearchQueryRequest {
 subscription OnCreateSearchQueryResponse {
   onCreateSearchQueryResponse {
     id
-    retailers {
-      id
-      name
-      url
-      price
-      country_of_origin
-    }
   }
 }
 subscription OnUpdateSearchQueryResponse {
   onUpdateSearchQueryResponse {
     id
-    retailers {
-      id
-      name
-      url
-      price
-      country_of_origin
-    }
   }
 }
 subscription OnDeleteSearchQueryResponse {
   onDeleteSearchQueryResponse {
     id
-    retailers {
-      id
-      name
-      url
-      price
-      country_of_origin
+  }
+}
+subscription OnCreateSearchQueryResponse2 {
+  onCreateSearchQueryResponse2 {
+    id
+    result {
+      itemNames {
+        itemName
+      }
+      itemPrices {
+        itemPrice
+      }
+      itemLinks {
+        itemLink
+      }
+    }
+  }
+}
+subscription OnUpdateSearchQueryResponse2 {
+  onUpdateSearchQueryResponse2 {
+    id
+    result {
+      itemNames {
+        itemName
+      }
+      itemPrices {
+        itemPrice
+      }
+      itemLinks {
+        itemLink
+      }
+    }
+  }
+}
+subscription OnDeleteSearchQueryResponse2 {
+  onDeleteSearchQueryResponse2 {
+    id
+    result {
+      itemNames {
+        itemName
+      }
+      itemPrices {
+        itemPrice
+      }
+      itemLinks {
+        itemLink
+      }
     }
   }
 }

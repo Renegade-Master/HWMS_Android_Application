@@ -9,7 +9,7 @@ import com.apollographql.apollo.GraphQLCall
 import com.apollographql.apollo.api.Response
 import com.apollographql.apollo.exception.ApolloException
 import type.CreateSearchQueryRequestInput
-import java.util.Date
+import java.util.*
 import kotlin.random.Random
 
 /**
@@ -50,6 +50,19 @@ object AppSyncClient : AppCompatActivity() {
         )?.enqueue(mutationCallback)
 
         println("Ran mutation")
+    }
+
+    @Synchronized
+    fun retrieveSearchResults(context: Context?, reqId: String) {
+        println(
+            "Attempting to retrieve request with:" +
+                    "\n ID: " + reqId
+        )
+
+        // Comment the following line out to disable DB connection
+        client = AppSyncClientFactory.getInstance(context!!)!!
+
+
     }
 
     private val mutationCallback =

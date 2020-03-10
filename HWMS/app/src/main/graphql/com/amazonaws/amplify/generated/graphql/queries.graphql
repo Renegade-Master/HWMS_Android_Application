@@ -27,13 +27,6 @@ query ListSearchQueryRequests(
 query GetSearchQueryResponse($id: ID!) {
   getSearchQueryResponse(id: $id) {
     id
-    retailers {
-      id
-      name
-      url
-      price
-      country_of_origin
-    }
   }
 }
 query ListSearchQueryResponses(
@@ -48,13 +41,38 @@ query ListSearchQueryResponses(
   ) {
     items {
       id
-      retailers {
-        id
-        name
-        url
-        price
-        country_of_origin
+    }
+    nextToken
+  }
+}
+query GetSearchQueryResponse2($id: ID!) {
+  getSearchQueryResponse2(id: $id) {
+    id
+    result {
+      itemNames {
+        itemName
       }
+      itemPrices {
+        itemPrice
+      }
+      itemLinks {
+        itemLink
+      }
+    }
+  }
+}
+query ListSearchQueryResponse2s(
+  $filter: ModelSearchQueryResponse2FilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listSearchQueryResponse2s(
+    filter: $filter
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
     }
     nextToken
   }

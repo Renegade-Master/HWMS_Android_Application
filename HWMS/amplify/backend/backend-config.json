@@ -1,6 +1,6 @@
 {
 	"api": {
-		"hwmsTest01": {
+		"hwmsTestApi": {
 			"service": "AppSync",
 			"providerPlugin": "awscloudformation",
 			"output": {
@@ -9,8 +9,8 @@
 					"defaultAuthentication": {
 						"authenticationType": "API_KEY",
 						"apiKeyConfig": {
-							"description": "HWMS Test API",
-							"apiKeyExpirationDays": "183"
+							"description": "HWMS_TEST_API_KEY",
+							"apiKeyExpirationDays": "180"
 						}
 					}
 				}
