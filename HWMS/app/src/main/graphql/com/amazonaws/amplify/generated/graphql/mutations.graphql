@@ -35,6 +35,7 @@ mutation CreateSearchQueryResponse(
 ) {
   createSearchQueryResponse(input: $input, condition: $condition) {
     id
+    result
   }
 }
 mutation UpdateSearchQueryResponse(
@@ -43,6 +44,7 @@ mutation UpdateSearchQueryResponse(
 ) {
   updateSearchQueryResponse(input: $input, condition: $condition) {
     id
+    result
   }
 }
 mutation DeleteSearchQueryResponse(
@@ -51,62 +53,6 @@ mutation DeleteSearchQueryResponse(
 ) {
   deleteSearchQueryResponse(input: $input, condition: $condition) {
     id
-  }
-}
-mutation CreateSearchQueryResponse2(
-  $input: CreateSearchQueryResponse2Input!
-  $condition: ModelSearchQueryResponse2ConditionInput
-) {
-  createSearchQueryResponse2(input: $input, condition: $condition) {
-    id
-    result {
-      itemNames {
-        itemName
-      }
-      itemPrices {
-        itemPrice
-      }
-      itemLinks {
-        itemLink
-      }
-    }
-  }
-}
-mutation UpdateSearchQueryResponse2(
-  $input: UpdateSearchQueryResponse2Input!
-  $condition: ModelSearchQueryResponse2ConditionInput
-) {
-  updateSearchQueryResponse2(input: $input, condition: $condition) {
-    id
-    result {
-      itemNames {
-        itemName
-      }
-      itemPrices {
-        itemPrice
-      }
-      itemLinks {
-        itemLink
-      }
-    }
-  }
-}
-mutation DeleteSearchQueryResponse2(
-  $input: DeleteSearchQueryResponse2Input!
-  $condition: ModelSearchQueryResponse2ConditionInput
-) {
-  deleteSearchQueryResponse2(input: $input, condition: $condition) {
-    id
-    result {
-      itemNames {
-        itemName
-      }
-      itemPrices {
-        itemPrice
-      }
-      itemLinks {
-        itemLink
-      }
-    }
+    result
   }
 }

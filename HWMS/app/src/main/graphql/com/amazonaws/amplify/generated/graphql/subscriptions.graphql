@@ -23,63 +23,18 @@ subscription OnDeleteSearchQueryRequest {
 subscription OnCreateSearchQueryResponse {
   onCreateSearchQueryResponse {
     id
+    result
   }
 }
 subscription OnUpdateSearchQueryResponse {
   onUpdateSearchQueryResponse {
     id
+    result
   }
 }
 subscription OnDeleteSearchQueryResponse {
   onDeleteSearchQueryResponse {
     id
-  }
-}
-subscription OnCreateSearchQueryResponse2 {
-  onCreateSearchQueryResponse2 {
-    id
-    result {
-      itemNames {
-        itemName
-      }
-      itemPrices {
-        itemPrice
-      }
-      itemLinks {
-        itemLink
-      }
-    }
-  }
-}
-subscription OnUpdateSearchQueryResponse2 {
-  onUpdateSearchQueryResponse2 {
-    id
-    result {
-      itemNames {
-        itemName
-      }
-      itemPrices {
-        itemPrice
-      }
-      itemLinks {
-        itemLink
-      }
-    }
-  }
-}
-subscription OnDeleteSearchQueryResponse2 {
-  onDeleteSearchQueryResponse2 {
-    id
-    result {
-      itemNames {
-        itemName
-      }
-      itemPrices {
-        itemPrice
-      }
-      itemLinks {
-        itemLink
-      }
-    }
+    result
   }
 }

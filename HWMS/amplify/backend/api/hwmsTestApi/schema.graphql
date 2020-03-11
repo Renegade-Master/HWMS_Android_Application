@@ -6,14 +6,19 @@ type SearchQueryRequest @model {
 
 type SearchQueryResponse @model {
   id: ID!
+  result: String!
 }
 
-type SearchQueryResponse2 @model {
-  id: ID!
-  result: [Results]!
+type Query {
+  getSearchResults(id: ID!) : Results!
+  getSearchResultString(id: ID!) : String!
 }
 
 type Results {
+  result: [SearchResult!]!
+}
+
+type SearchResult {
   itemNames: [ItemNames!]!
   itemPrices: [ItemPrices!]!
   itemLinks: [ItemLinks!]!

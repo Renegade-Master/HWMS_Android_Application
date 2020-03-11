@@ -4,6 +4,8 @@ import android.content.Context
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.amazonaws.amplify.generated.graphql.CreateSearchQueryRequestMutation
+import com.amazonaws.amplify.generated.graphql.GetSearchQueryResponseQuery
+import com.amazonaws.amplify.generated.graphql.GetSearchResultStringQuery
 import com.amazonaws.mobileconnectors.appsync.AWSAppSyncClient
 import com.apollographql.apollo.GraphQLCall
 import com.apollographql.apollo.api.Response
@@ -11,6 +13,7 @@ import com.apollographql.apollo.exception.ApolloException
 import type.CreateSearchQueryRequestInput
 import java.util.*
 import kotlin.random.Random
+
 
 /**
  * The AppSyncClient Class.
@@ -62,7 +65,17 @@ object AppSyncClient : AppCompatActivity() {
         // Comment the following line out to disable DB connection
         client = AppSyncClientFactory.getInstance(context!!)!!
 
+        val getSearchQueryResponseInput = GetSearchQueryResponseQuery.builder()
+            .id(reqId)
+            .build()
 
+        client.query(
+            GetSearchResultStringQuery.builder()
+                .id(reqId)
+                .build()
+        )?.enqueue(queryCallBack)
+
+        println("Ran query")
     }
 
     private val mutationCallback =
@@ -75,6 +88,19 @@ object AppSyncClient : AppCompatActivity() {
             override fun onFailure(e: ApolloException) {
                 Log.e("Error", e.toString())
                 println("Failed to add entry")
+            }
+        }
+
+    private val queryCallBack =
+        object : GraphQLCall.Callback<GetSearchResultStringQuery.Data>() {
+            override fun onResponse(response: Response<GetSearchResultStringQuery.Data>) {
+                Log.i("Success", "Retrieved Entry")
+                println("Retrieved entry")
+            }
+
+            override fun onFailure(e: ApolloException) {
+                Log.e("Error", e.toString())
+                println("Failed to retrieve entry")
             }
         }
 

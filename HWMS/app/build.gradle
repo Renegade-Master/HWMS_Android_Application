@@ -69,6 +69,9 @@ dependencies {
     implementation 'com.amazonaws:aws-android-sdk-appsync:3.0.1'
     implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.2'
     implementation 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
+    //Amplify Framework
+    implementation 'com.amplifyframework:core:0.9.1'
+    implementation 'com.amplifyframework:aws-datastore:0.9.1'
 
 }
 
