@@ -1,6 +1,8 @@
 package com.k00221230.fyp.hwms.ui.searchwizard
 
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -35,7 +37,8 @@ class SearchWizResultsFragment : Fragment() {
         val searchTerm: String = searchTermArgs.searchTerm
 
         // Comment this line to disable DB Connection safely
-        AppSyncClient.sendClientRequest(context, searchTerm)
+        val reqId: String =
+            AppSyncClient.sendClientRequest(context, searchTerm)
 
         view.findViewById<TextView>(R.id.textview_searchwiz_results).text =
             getString(R.string.menu_searchwiz_results)
@@ -44,6 +47,10 @@ class SearchWizResultsFragment : Fragment() {
         val tableLayout = view.findViewById<TableLayout>(R.id.searchwiz_results_tablelayout)
 
         // ToDo: Wait for a reply to come back
+        var response: List<List<String>> =
+            AppSyncClient.retrieveSearchResults(context, reqId)
+
+        println("Result Page Response: \n$response")
 
         // ToDo: Populate the table with the results
         var nextItem: TableRow
@@ -54,7 +61,7 @@ class SearchWizResultsFragment : Fragment() {
 
         dataRowLayout.weight = 1.0f
 
-        for (i in 1..20) {
+        for (i in 0 until response[1].count()) {
             nextItem = TableRow(context)
             nextItem.weightSum = 3.0f
 
@@ -66,9 +73,14 @@ class SearchWizResultsFragment : Fragment() {
             itemPrice.layoutParams = dataRowLayout
             itemLink.layoutParams = dataRowLayout
 
-            itemName.text = "New Item $i"
-            itemPrice.text = "€123.45"
-            itemLink.text = "GoToItem"
+            itemName.text = if (response[0][i].count() < 25) response[0][i] else response[0][i].substring(0,25)
+            itemPrice.text = response[1][i]
+            itemLink.text = "Go"
+            itemLink.setOnClickListener {
+                val openURL = Intent(Intent.ACTION_VIEW)
+                openURL.data = Uri.parse(response[2][i])
+                startActivity(openURL)
+            }
 
             nextItem.addView(itemName)
             nextItem.addView(itemPrice)
