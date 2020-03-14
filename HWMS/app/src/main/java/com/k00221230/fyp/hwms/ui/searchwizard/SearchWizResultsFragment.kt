@@ -1,3 +1,10 @@
+/*
+ * Copyright (c) 2020 RenegadeMaster Inc. - All Right Reserved
+ * Unauthorized copying of this file, via any medium is strictly prohibited.
+ * The contents of this file are proprietary and confidential.
+ * Written by Ciaran Bent <ciaran.bent@protonmail.ch>, March 2020
+ */
+
 package com.k00221230.fyp.hwms.ui.searchwizard
 
 
@@ -70,6 +77,8 @@ class SearchWizResultsFragment : Fragment() {
 
         dataRowLayout.weight = 1.0f
 
+        // This for loop generates a new TableRow for every item returned by the call to the
+        // 'retrieveSearchResults' function.
         for (i in 0 until response[1].count()) {
             nextItem = TableRow(context)
             nextItem.weightSum = 3.0f

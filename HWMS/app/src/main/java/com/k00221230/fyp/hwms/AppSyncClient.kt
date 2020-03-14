@@ -1,3 +1,10 @@
+/*
+ * Copyright (c) 2020 RenegadeMaster Inc. - All Right Reserved
+ * Unauthorized copying of this file, via any medium is strictly prohibited.
+ * The contents of this file are proprietary and confidential.
+ * Written by Ciaran Bent <ciaran.bent@protonmail.ch>, March 2020
+ */
+
 package com.k00221230.fyp.hwms
 
 import android.content.Context
@@ -11,7 +18,7 @@ import com.apollographql.apollo.GraphQLCall
 import com.apollographql.apollo.api.Response
 import com.apollographql.apollo.exception.ApolloException
 import type.CreateSearchQueryRequestInput
-import java.util.*
+import java.util.Date
 import javax.annotation.Nonnull
 import kotlin.random.Random
 
@@ -31,6 +38,9 @@ object AppSyncClient : AppCompatActivity() {
     private var reqId: String = String()
     private var resultString: String = String()
 
+    /**
+     * Format and send a Search Request to the DynamoDB Requests Table.
+     */
     @Synchronized
     fun sendClientRequest(context: Context?, item: String, prediction: Boolean = false): String {
         println(
@@ -39,7 +49,6 @@ object AppSyncClient : AppCompatActivity() {
                     "\nItem: " + item
         )
 
-        // Comment the following line out to disable DB connection
         client = AppSyncClientFactory.getInstance(context!!)!!
 
         reqId = generateId()
@@ -59,6 +68,9 @@ object AppSyncClient : AppCompatActivity() {
         return reqId
     }
 
+    /**
+     * Retrieve and format the result of the Web-Crawl from the DynamoDB Response Table.
+     */
     @Synchronized
     fun retrieveSearchResults(context: Context?, reqId: String): List<List<String>> {
         println(
@@ -90,6 +102,9 @@ object AppSyncClient : AppCompatActivity() {
         return workingString
     }
 
+    /**
+     * Callback function for communicating with the DynamoDB API using the AppSync API.
+     */
     private val mutationCallback =
         object : GraphQLCall.Callback<CreateSearchQueryRequestMutation.Data>() {
             override fun onResponse(response: Response<CreateSearchQueryRequestMutation.Data>) {
@@ -101,6 +116,9 @@ object AppSyncClient : AppCompatActivity() {
             }
         }
 
+    /**
+     * Callback function for communicating with the DynamoDB API using the AppSync API.
+     */
     private val queryCallback: GraphQLCall.Callback<GetSearchResultStringQuery.Data> =
         object : GraphQLCall.Callback<GetSearchResultStringQuery.Data>() {
             override fun onResponse(@Nonnull response: Response<GetSearchResultStringQuery.Data>) {
@@ -112,19 +130,6 @@ object AppSyncClient : AppCompatActivity() {
                 Log.e("ERROR: Could not get item from DB", e.toString())
             }
         }
-
-    /**
-     * Generate an ID that can be used to identify the request that this Client sends to the DB.
-     * This ID is then used to retrieve the results of the Current and Predicted price data.
-     */
-    private fun generateId(): String {
-        var id: Long = Date().time
-
-        // ToDo: Find a better way to generate a random ID
-        id += rand.nextLong(1, 85132547)
-
-        return id.toString()
-    }
 
     /**
      * Clean the result String by removing the unnecessary parts, and converting it to a List-like
@@ -144,6 +149,9 @@ object AppSyncClient : AppCompatActivity() {
         return workingString
     }
 
+    /**
+     * Convert a String known to contain THREE lists of items into a List<List<String>> structure.
+     */
     private fun stringToLists(s: String): List<List<String>> {
         var workingString: String = String()
         var workingList: List<String> = ArrayList<String>()
@@ -183,6 +191,9 @@ object AppSyncClient : AppCompatActivity() {
         return workingLists
     }
 
+    /**
+     * Convert a String known to contain a single list of items into a List<String> structure.
+     */
     private fun stringToList(s: String, delims: String): List<String> {
         var workingList: MutableList<String> = ArrayList<String>(0)
 
@@ -197,6 +208,23 @@ object AppSyncClient : AppCompatActivity() {
         return workingList
     }
 
+    /**
+     * Generate an ID that can be used to identify the request that this Client sends to the DB.
+     * This ID is then used to retrieve the results of the Current and Predicted price data.
+     */
+    private fun generateId(): String {
+        var id: Long = Date().time
+
+        // ToDo: Find a better way to generate a random ID
+        id += rand.nextLong(1, 85132547)
+
+        return id.toString()
+    }
+
+    /**
+     * Measure the time in Milliseconds taken to execute any function.
+     * Made inline as this may need to be called many times under certain circumstances.
+     */
     inline fun <T> measureTimeMillis(
         loggingFunction: (Long) -> Unit,
         function: () -> T
