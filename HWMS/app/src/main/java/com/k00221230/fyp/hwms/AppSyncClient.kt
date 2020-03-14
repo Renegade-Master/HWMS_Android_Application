@@ -71,7 +71,7 @@ object AppSyncClient : AppCompatActivity() {
 
         // ToDo: Try to offload this to a Thread so as not to hang the UI Thread
         do {
-            Thread.sleep(5000)
+            Thread.sleep(500)
 
             client.query(
                 GetSearchResultStringQuery.builder()
@@ -166,9 +166,11 @@ object AppSyncClient : AppCompatActivity() {
         println("\tList PT 01: Len: ${workingList[1].count()}\n${workingList[1]}")
         println("\tList PT 02: Len: ${workingList[2].count()}\n${workingList[2]}")
 
-        workingLists.add(workingList[0].split(regex = "(?<![gzk0KWBU])(?<=[a-zA-Z0-9.])[,][\\s](?![a-hj-z468])".toRegex()) as ArrayList<String>)
-        workingLists.add(workingList[1].split(regex = "[,][\\s]".toRegex()) as ArrayList<String>)
-        workingLists.add(workingList[2].split(regex = "[,][\\s]".toRegex()) as ArrayList<String>)
+        workingLists.add(workingList[0].split(
+                "(?<![gzk0KWBU])(?<=[a-zA-Z0-9.])[,][\\s](?![a-hj-z468])"
+                        .toRegex()) as ArrayList<String>)
+        workingLists.add(workingList[1].split("[,][\\s]".toRegex()) as ArrayList<String>)
+        workingLists.add(workingList[2].split("[,][\\s]".toRegex()) as ArrayList<String>)
 
         println("List State 02:\n$workingList")
         println("\tList PT 00: Len: ${workingLists[0].count()}\n${workingLists[0]}")
@@ -190,5 +192,15 @@ object AppSyncClient : AppCompatActivity() {
         println("StringToList Stage 02: \n$workingList")
 
         return workingList
+    }
+
+    public inline fun <T> measureTimeMillis(loggingFunction: (Long) -> Unit,
+                                     function: () -> T): T {
+
+        val startTime = System.currentTimeMillis()
+        val result: T = function.invoke()
+        loggingFunction.invoke(System.currentTimeMillis() - startTime)
+
+        return result
     }
 }

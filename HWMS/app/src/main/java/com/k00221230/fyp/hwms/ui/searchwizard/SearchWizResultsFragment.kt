@@ -4,6 +4,7 @@ package com.k00221230.fyp.hwms.ui.searchwizard
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,6 +15,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import com.k00221230.fyp.hwms.AppSyncClient
+import com.k00221230.fyp.hwms.AppSyncClient.measureTimeMillis
 import com.k00221230.fyp.hwms.R
 
 class SearchWizResultsFragment : Fragment() {
@@ -45,11 +47,13 @@ class SearchWizResultsFragment : Fragment() {
 
         // The TableLayout for the results
         val tableLayout = view.findViewById<TableLayout>(R.id.searchwiz_results_tablelayout)
+        var response: List<List<String>> = ArrayList<List<String>>()
 
-        // ToDo: Wait for a reply to come back
-        var response: List<List<String>> =
-            AppSyncClient.retrieveSearchResults(context, reqId)
-
+        measureTimeMillis({ time -> Log.i("ExecutionTime", "Retrieving Data took $time milliseconds") }) {
+            // ToDo: Wait for a reply to come back
+            response =
+                AppSyncClient.retrieveSearchResults(context, reqId)
+        }
         println("Result Page Response: \n$response")
 
         // ToDo: Populate the table with the results
