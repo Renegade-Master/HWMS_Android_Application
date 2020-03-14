@@ -49,7 +49,12 @@ class SearchWizResultsFragment : Fragment() {
         val tableLayout = view.findViewById<TableLayout>(R.id.searchwiz_results_tablelayout)
         var response: List<List<String>> = ArrayList<List<String>>()
 
-        measureTimeMillis({ time -> Log.i("ExecutionTime", "Retrieving Data took $time milliseconds") }) {
+        measureTimeMillis({ time ->
+            Log.i(
+                "ExecutionTime",
+                "Retrieving Data took $time milliseconds"
+            )
+        }) {
             // ToDo: Wait for a reply to come back
             response =
                 AppSyncClient.retrieveSearchResults(context, reqId)
@@ -61,7 +66,7 @@ class SearchWizResultsFragment : Fragment() {
         var itemName: TextView
         var itemPrice: TextView
         var itemLink: Button
-        val dataRowLayout : TableRow.LayoutParams = TableRow.LayoutParams()
+        val dataRowLayout: TableRow.LayoutParams = TableRow.LayoutParams()
 
         dataRowLayout.weight = 1.0f
 
@@ -77,7 +82,8 @@ class SearchWizResultsFragment : Fragment() {
             itemPrice.layoutParams = dataRowLayout
             itemLink.layoutParams = dataRowLayout
 
-            itemName.text = if (response[0][i].count() < 25) response[0][i] else response[0][i].substring(0,25)
+            itemName.text =
+                if (response[0][i].count() < 25) response[0][i] else response[0][i].substring(0, 25)
             itemPrice.text = response[1][i]
             itemLink.text = "Go"
             itemLink.setOnClickListener {

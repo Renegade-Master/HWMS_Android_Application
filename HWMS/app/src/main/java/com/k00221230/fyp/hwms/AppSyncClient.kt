@@ -32,7 +32,7 @@ object AppSyncClient : AppCompatActivity() {
     private var resultString: String = String()
 
     @Synchronized
-    fun sendClientRequest(context: Context?, item: String, prediction: Boolean = false) : String {
+    fun sendClientRequest(context: Context?, item: String, prediction: Boolean = false): String {
         println(
             "Attempting to send:" +
                     "\nPrediction: " + prediction +
@@ -60,7 +60,7 @@ object AppSyncClient : AppCompatActivity() {
     }
 
     @Synchronized
-    fun retrieveSearchResults(context: Context?, reqId: String) : List<List<String>> {
+    fun retrieveSearchResults(context: Context?, reqId: String): List<List<String>> {
         println(
             "Attempting to retrieve request with:" +
                     "\nID: " + reqId
@@ -78,8 +78,8 @@ object AppSyncClient : AppCompatActivity() {
                     .id(reqId)
                     .build()
             ).responseFetcher(AppSyncResponseFetchers.CACHE_AND_NETWORK)
-             .enqueue(queryCallback)
-        } while(resultString.isNullOrBlank() || resultString == "null")
+                .enqueue(queryCallback)
+        } while (resultString.isNullOrBlank() || resultString == "null")
 
         val stringToReturn: String = cleanResponseString(resultString)
         var workingString: List<List<String>>
@@ -144,10 +144,10 @@ object AppSyncClient : AppCompatActivity() {
         return workingString
     }
 
-    private fun stringToLists(s: String) : List<List<String>> {
+    private fun stringToLists(s: String): List<List<String>> {
         var workingString: String = String()
-        var workingList : List<String> = ArrayList<String>()
-        var workingLists : ArrayList<ArrayList<String>> = ArrayList<ArrayList<String>>()
+        var workingList: List<String> = ArrayList<String>()
+        var workingLists: ArrayList<ArrayList<String>> = ArrayList<ArrayList<String>>()
 
         // Isolate the different lists
         println("StringToLists Stage 00: \n$workingString")
@@ -166,9 +166,12 @@ object AppSyncClient : AppCompatActivity() {
         println("\tList PT 01: Len: ${workingList[1].count()}\n${workingList[1]}")
         println("\tList PT 02: Len: ${workingList[2].count()}\n${workingList[2]}")
 
-        workingLists.add(workingList[0].split(
+        workingLists.add(
+            workingList[0].split(
                 "(?<![gzk0KWBU])(?<=[a-zA-Z0-9.])[,][\\s](?![a-hj-z468])"
-                        .toRegex()) as ArrayList<String>)
+                    .toRegex()
+            ) as ArrayList<String>
+        )
         workingLists.add(workingList[1].split("[,][\\s]".toRegex()) as ArrayList<String>)
         workingLists.add(workingList[2].split("[,][\\s]".toRegex()) as ArrayList<String>)
 
@@ -180,7 +183,7 @@ object AppSyncClient : AppCompatActivity() {
         return workingLists
     }
 
-    private fun stringToList(s: String, delims: String) : List<String> {
+    private fun stringToList(s: String, delims: String): List<String> {
         var workingList: MutableList<String> = ArrayList<String>(0)
 
         println("StringToList Stage 00: \n$s")
@@ -194,8 +197,10 @@ object AppSyncClient : AppCompatActivity() {
         return workingList
     }
 
-    public inline fun <T> measureTimeMillis(loggingFunction: (Long) -> Unit,
-                                     function: () -> T): T {
+    inline fun <T> measureTimeMillis(
+        loggingFunction: (Long) -> Unit,
+        function: () -> T
+    ): T {
 
         val startTime = System.currentTimeMillis()
         val result: T = function.invoke()
