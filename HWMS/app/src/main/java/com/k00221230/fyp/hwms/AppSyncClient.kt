@@ -28,7 +28,7 @@ import kotlin.random.Random
  *
  * This Class is used to communicate with the AWS backend for HWMS.
  */
-object AppSyncClient : AppCompatActivity() {
+public object AppSyncClient : AppCompatActivity() {
     @Volatile
     private lateinit var client: AWSAppSyncClient
 
